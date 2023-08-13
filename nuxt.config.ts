@@ -2,12 +2,20 @@
 export default defineNuxtConfig({
   // devtools: { enabled: true }
   pages: true,
+  css: ['~/assets/styles/main.scss'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   modules: [
     "nuxt-icon",
     "nuxt-lodash",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
-    "@nuxtjs/tailwindcss",
+    // "@nuxtjs/tailwindcss",
+    // "@nuxtjs/i18n",
     // "@nuxtjs/supabase",
   ],
   runtimeConfig: {
@@ -17,7 +25,14 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      script: [{ src: "https://js.stripe.com/v3/", defer: true }],
+      script: [
+        { src: "https://js.stripe.com/v3/", defer: true },
+        {
+          src: "/vendor/preline/dist/preline.js",
+          body: true,
+          defer: true,
+        },
+      ],
     },
   },
 })
