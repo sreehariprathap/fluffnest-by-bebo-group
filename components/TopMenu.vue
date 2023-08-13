@@ -1,15 +1,15 @@
 <template>
   <div
     id="top-menu"
-    class="w-full bg-slate-100 border-b md:flex hidden justify-between items-center"
+    class="w-full bg-slate-100 border-b md:flex hidden justify-between items-center py-3 px-4"
   >
     <ul
-      class="flex gap-5 items-center justify-end text-xs text-[#333333] font-light px-2 h-10 bg-[#FAFAFA] max-w-[1200px]"
+      class="flex gap-5 items-center justify-end text-xs text-[#333333] font-light px-2 h-10  max-w-[1200px]"
     >
       <li
         class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer"
       >
-        Sell on AliExpress
+      {{ $t("sellOnBebo") }}
       </li>
       <li>
         <h1>{{ $t("hello", { name: "vue-i18n" }) }}</h1>
@@ -17,7 +17,7 @@
     </ul>
     <div>
       <form>
-        <label for="locale-select">{{ $t("language") }}: </label>
+        <label for="locale-select" class="mr-3">{{ $t("language") }} {{" "}} </label>
         <select
           id="locale-select"
           v-model="$i18n.locale"

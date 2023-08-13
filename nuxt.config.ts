@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   // devtools: { enabled: true }
   pages: true,
-  css: ['~/assets/styles/main.scss'],
+  css: ["~/assets/styles/main.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -25,14 +25,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      script: [
-        { src: "https://js.stripe.com/v3/", defer: true },
-        {
-          src: "/vendor/preline/dist/preline.js",
-          body: true,
-          defer: true,
-        },
-      ],
+      script: [{ src: "https://js.stripe.com/v3/", defer: true }],
     },
   },
 })
