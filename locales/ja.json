@@ -1,5 +1,7 @@
 {
   "hello": "こんにちは",
   "language": "言語",
-  "sellOnBebo": "ベボで売る"
+  "sellOnBebo": "ベボで売る",
+  "help": "ヘルプ",
+  "buyerProtection": "購入者保護"
 }

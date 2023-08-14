@@ -1,5 +1,7 @@
 {
   "hello": "Bonjour",
   "language": "Langue",
-  "sellOnBebo": "Vendre sur bebo"
+  "sellOnBebo": "Vendre sur bebo",
+  "help": "Aide",
+  "buyerProtection": "Protection de l'acheteur"
 }

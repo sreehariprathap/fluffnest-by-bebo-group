@@ -1,5 +1,8 @@
 {
-    "hello": "Hello",
-    "language": "Language",
-    "sellOnBebo":"Sell on bebo"
-  }
+  "hello": "Hello",
+  "language": "Language",
+  "sellOnBebo": "Sell on bebo",
+  "help": "Help",
+  "buyerProtection": "Buyer Protection",
+  "account": "Account"
+}
