@@ -4,5 +4,8 @@
   "sellOnBebo": "Sell on bebo",
   "help": "Help",
   "buyerProtection": "Buyer Protection",
-  "account": "Account"
+  "account": "Account",
+  "welcome": "Welcome to fluffnest!",
+  "myOrders": "My orders",
+  "signOut": "Sign out"
 }
