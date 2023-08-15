@@ -7,5 +7,27 @@
   "account": "Account",
   "welcome": "Welcome to fluffnest!",
   "myOrders": "My orders",
-  "signOut": "Sign out"
+  "signOut": "Sign out",
+
+  "footer": {
+    "help": "Help",
+    "helpCenter": "Help Center, Disputes & Reports, Buyer Protection, Report IPR infringement, Regulated Information",
+    "fluffNestMultiLanguage": "FluffNest Multi-Language Sites",
+    "languages": "Russian, Portuguese, Spanish, French, German, Italian, Dutch, Turkish, Japanese, Korean, Thai, Vietnamese, Arabic, Hebrew, Polish",
+    "browseByCategory": "Browse by Category",
+    "popular": "All Popular, Product, Promotion, Low Price, Great Value, Reviews, Blog, Seller Portal, BLACK FRIDAY, FluffNest Assistant",
+    "beboGroup": "Bebo Group",
+    "beboGroupSites": "Bebo Group Website, FluffNest"
+  },
+  "footerSub": {
+    "intellectualProtection": "Intellectual Property Protection",
+    "privacyPolicy": "Privacy Policy",
+    "sitemap": "Sitemap",
+    "termsOfUse": "Terms of Use",
+    "infoForEUConsumers": "Information for EU consumers",
+    "transactionServicesAgreement": "Transaction Services Agreement for non-EU/UK Consumers",
+    "termsAndConditionsEU": "Terms and Conditions for EU/EEA/UK Consumers (Transactions)",
+    "allRightsReserved": "All rights reserved.",
+    "increaseValueTelecom": "增值电信业务经营许可证 浙B2-20120091-8 浙公网安备 33010802002248号"
+  }
 }

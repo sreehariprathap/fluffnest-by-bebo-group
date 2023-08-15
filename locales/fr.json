@@ -3,5 +3,27 @@
   "language": "Langue",
   "sellOnBebo": "Vendre sur bebo",
   "help": "Aide",
-  "buyerProtection": "Protection de l'acheteur"
+  "buyerProtection": "Protection de l'acheteur",
+
+  "footer": {
+    "help": "Aide",
+    "helpCenter": "Centre d'aide, Litiges et rapports, Protection de l'acheteur, Signalement de violation des DPI, Information réglementée",
+    "fluffNestMultiLanguage": "Sites FluffNest en plusieurs langues",
+    "languages": "Russe, Portugais, Espagnol, Français, Allemand, Italien, Néerlandais, Turc, Japonais, Coréen, Thaï, Vietnamien, Arabe, Hébreu, Polonais",
+    "browseByCategory": "Parcourir par catégorie",
+    "popular": "Tous les populaires, Produit, Promotion, Prix bas, Grande valeur, Avis, Blog, Portail vendeur, BLACK FRIDAY, Assistant FluffNest",
+    "beboGroup": "Groupe Bebo",
+    "beboGroupSites": "Site web du groupe Bebo, FluffNest"
+  },
+  "footerSub": {
+    "intellectualProtection": "Protection de la propriété intellectuelle",
+    "privacyPolicy": "Politique de confidentialité",
+    "sitemap": "Plan du site",
+    "termsOfUse": "Conditions d'utilisation",
+    "infoForEUConsumers": "Information pour les consommateurs de l'UE",
+    "transactionServicesAgreement": "Accord sur les services de transaction pour les consommateurs non-UE/RU",
+    "termsAndConditionsEU": "Conditions générales pour les consommateurs de l'UE/EEE/RU (Transactions)",
+    "allRightsReserved": "Tous droits réservés.",
+    "increaseValueTelecom": "增值电信业务经营许可证 浙B2-20120091-8 浙公网安备 33010802002248号"
+  }
 }

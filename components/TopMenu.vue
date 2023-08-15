@@ -137,7 +137,7 @@
         </div>
       </div>
       <!-- cart  -->
-      <NuxtLink to="/shoppingcart" class="flex items-center">
+      <NuxtLink to="/cart" class="flex items-center">
         <button
           class="relative md:block hidden"
           @mouseenter="isCartHover = true"
@@ -167,14 +167,12 @@
       </button>
     </div>
   </div>
-
-  <Loading v-if="false" />
-
-  <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]" />
-  <slot />
 </template>
 
 <script setup>
+import { useUserStore } from "@/stores/user"
+const userStore = useUserStore()
+
 let isAccountMenu = ref(false)
 let isSearching = ref(false)
 let searchItem = ref("")
