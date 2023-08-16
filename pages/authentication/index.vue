@@ -30,4 +30,17 @@
   </div>
 </template>
 
-<script></script>
+<script setup>
+watchEffect(() => {
+//   if (user.value) {
+//     return navigateTo("/")
+//   }
+})
+
+const login = async (prov) => {
+  const { data, error } = await client.auth.signInWithOAuth({
+    provider: prov,
+    redirectTo: window.location.origin,
+  })
+}
+</script>
