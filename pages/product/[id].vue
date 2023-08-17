@@ -24,13 +24,10 @@
           </div>
         </div>
         <div class="md:w-[60%] bg-white p-3 rounded-lg">
-          <div v-if="true">
-            <p class="mb-2">Title</p>
+          <div v-if="product && product.data">
+            <p class="mb-2">{{ product.data.title }}</p>
             <p class="font-light text-[12px] mb-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore
-              eveniet iure nesciunt laboriosam, vero aliquam rem minima totam
-              similique a, nostrum quos voluptatum suscipit commodi est omnis
-              esse quaerat molestiae.
+              {{ product.data.description }}
             </p>
           </div>
 
@@ -103,16 +100,12 @@ onBeforeMount(async () => {
   product.value = await useFetch(
     `/api/prisma/get-product-by-id/${route.params.id}`
   )
-  currentImage.value =
-    "https://images.thedermaco.com/promotional/faq-image/1_%20Salicylic%20Acid%20Face%20Wash.jpg"
-  images.value[0] =
-    "https://images.thedermaco.com/promotional/faq-image/1_%20Salicylic%20Acid%20Face%20Wash.jpg"
 })
 
 watchEffect(() => {
   if (product.value && product.value.data) {
-    // currentImage.value = product.value.data.url
-    // images.value[0] = product.value.data.url
+    currentImage.value = product.value.data.url
+    images.value[0] = product.value.data.url
     userStore.isLoading = false
   }
 })
@@ -128,11 +121,7 @@ const isInCart = computed(() => {
 })
 
 const images = ref([
-  "",
-  "https://images.thedermaco.com/promotional/faq-image/1_%20Salicylic%20Acid%20Face%20Wash.jpg",
-  "https://tdc.imgix.net/catalog/product/3/r/3rd_1.jpg",
-  "https://tdc.imgix.net/catalog/product/5/n/5new.jpg?auto=format&fit=crop&w=720&auto=compress",
-  "https://tdc.imgix.net/catalog/product/1/_/1_7_1.jpg?auto=format&fit=crop&w=720&auto=compress",
+  ""
 ])
 
 const addToCart = () => {

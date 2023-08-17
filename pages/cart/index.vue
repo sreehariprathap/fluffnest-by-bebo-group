@@ -2,16 +2,19 @@
   <MainLayout>
     <div id="ShoppingCartPage" class="mt-4 max-w-[1200px] mx-auto px-2">
       <!-- no items section  -->
-      <div v-if="false" class="h-[500px] flex items-center justify-center">
+      <div
+        v-if="!userStore.cart.length"
+        class="h-[500px] flex items-center justify-center"
+      >
         <div class="pt-20">
           <!-- no items section icon  -->
           <img class="mx-auto" width="250" src="@/assets/cart-empty.webp" />
 
           <div class="text-xl text-center mt-4">No items yet?</div>
 
-          <div v-if="true" class="flex text-center">
+          <div v-if="!user" class="flex text-center">
             <NuxtLink
-              to="/auth"
+              to="/authentication"
               class="app-btn w-full text-white text-xl font-semibold p-1.5 py-2.5 rounded-md mt-4"
             >
               Sign in
@@ -23,7 +26,9 @@
       <div v-else class="md:flex gap-4 justify-between mx-auto w-full">
         <div class="md:w-[65%]">
           <div class="bg-white rounded-lg p-4">
-            <div class="text-2xl font-bold mb-2">Shopping Cart 5</div>
+            <div class="text-2xl font-bold mb-2">
+              Shopping Cart ({{ userStore.cart.length }})
+            </div>
           </div>
 
           <div class="bg-[#FEEEEF] rounded-lg p-4 mt-4">
@@ -33,7 +38,7 @@
           </div>
 
           <div id="Items" class="bg-white rounded-lg p-4 mt-4">
-            <div v-for="product in products">
+            <div v-for="product in userStore.cart">
               <CartItem
                 :product="product"
                 :selectedArray="selectedArray"
@@ -84,9 +89,10 @@
 </template>
 
 <script setup>
-import MainLayout from "~/layouts/MainLayout.vue"
-import { useUserStore } from "~/stores/user"
+import MainLayout from "@/layouts/MainLayout.vue"
+import { useUserStore } from "@/stores/user"
 const userStore = useUserStore()
+const user = useSupabaseUser()
 
 let selectedArray = ref([])
 
@@ -133,56 +139,4 @@ const goToCheckout = () => {
 
   return navigateTo("/checkout")
 }
-
-const products = [
-  {
-    id: 1,
-    title: "title 1",
-    description: "this is a description",
-    url: "https://tdc.imgix.net/catalog/product/1/s/1st_2.jpg?auto=format&fit=crop&w=720&auto=compress",
-    price: 999,
-  },
-  {
-    id: 2,
-    title: "title 1",
-    description: "this is a description",
-    url: "https://tdc.imgix.net/catalog/product/1/s/1st_2.jpg?auto=format&fit=crop&w=720&auto=compress",
-    price: 999,
-  },
-  {
-    id: 3,
-    title: "title 1",
-    description: "this is a description",
-    url: "https://tdc.imgix.net/catalog/product/1/s/1st_2.jpg?auto=format&fit=crop&w=720&auto=compress",
-    price: 999,
-  },
-  {
-    id: 4,
-    title: "title 1",
-    description: "this is a description",
-    url: "https://tdc.imgix.net/catalog/product/1/s/1st_2.jpg?auto=format&fit=crop&w=720&auto=compress",
-    price: 999,
-  },
-  {
-    id: 5,
-    title: "title 1",
-    description: "this is a description",
-    url: "https://tdc.imgix.net/catalog/product/1/s/1st_2.jpg?auto=format&fit=crop&w=720&auto=compress",
-    price: 999,
-  },
-  {
-    id: 6,
-    title: "title 1",
-    description: "this is a description",
-    url: "https://tdc.imgix.net/catalog/product/1/s/1st_2.jpg?auto=format&fit=crop&w=720&auto=compress",
-    price: 999,
-  },
-  {
-    id: 7,
-    title: "title 1",
-    description: "this is a description",
-    url: "https://tdc.imgix.net/catalog/product/1/s/1st_2.jpg?auto=format&fit=crop&w=720&auto=compress",
-    price: 999,
-  },
-]
 </script>

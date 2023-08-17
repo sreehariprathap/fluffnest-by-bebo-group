@@ -31,28 +31,30 @@
 
           <div
             id="AccountMenu"
-            v-if="true"
             class="absolute bg-white w-[213.5px] text-dark-main z-40 top-[38px] -left-[68.5px] border-none hover:border shadow-2xl"
           >
             <div
               v-if="isAccountMenu"
               class="px-3 py-2 flex flex-col items-start"
             >
-              <div class="text-semibold text-[15px] my-4">
-                {{ $t("welcome") }}
+              <div v-if="!user" class="flex flex-col gap-3 items-center">
+                <div class="text-semibold text-[15px] my-4">
+                  {{ $t("welcome") }}
+                </div>
+                <div class="flex items-center gap-1 mb-3 w-full">
+                  <NuxtLink to="/authentication" class="app-btn">
+                    Login / Register
+                  </NuxtLink>
+                </div>
               </div>
-              <div class="flex items-center gap-1 mb-3 w-full">
-                <NuxtLink to="/auth" class="app-btn">
-                  Login / Register
-                </NuxtLink>
-              </div>
-              <div class="h-[0.1px] bg-dark-main w-full my-3"></div>
-              <div v-if="true">
-                <ul class="flex flex-col gap-3">
+              <div v-if="user">
+                <ul class="flex flex-col gap-3 ">
                   <li class="px-3 app-list-text text-sm font-normal">
                     {{ $t("myOrders") }}
                   </li>
                   <li
+                    v-if="user"
+                    @click="client.auth.signOut()"
                     class="px-3 app-list-text text-red-400 text-sm font-normal"
                   >
                     {{ $t("signOut") }}
@@ -65,9 +67,6 @@
         <li>
           <div>
             <form>
-              <!-- <label for="locale-select" class="mr-3 app-list-text"
-                >{{ $t("language") }} {{ " " }}
-              </label> -->
               <select
                 id="locale-select"
                 v-model="$i18n.locale"
@@ -84,14 +83,17 @@
         <!-- <h1>{{ $t("hello", { name: "vue-i18n" }) }}</h1> -->
       </ul>
     </div>
+    <!-- second level  -->
     <div class="navbar bg-slate-100 px-4 flex gap-10 justify-between">
       <!-- logo -->
       <div>
-        <img
-          src="~/assets/fluffnest-light.png"
-          alt="fluffnest logo"
-          class="w-28 hover:scale-105 transform ease-in-out duration-200 cursor-pointer"
-        />
+        <NuxtLink to="/">
+          <img
+            src="~/assets/fluffnest-light.png"
+            alt="fluffnest logo"
+            class="w-28 hover:scale-105 transform ease-in-out duration-200 cursor-pointer"
+          />
+        </NuxtLink>
       </div>
       <!-- searchbox  -->
       <div class="max-w-[700px] w-full md:block hidden">
@@ -114,24 +116,28 @@
             <button class="flex items-center h-[100%] p-1.5 px-2 bg-primary">
               <Icon name="ph:magnifying-glass" size="20" color="#ffffff" />
             </button>
-          </div>
 
-          <div class="absolute bg-white max-w-[700px] h-auto w-full">
+            <!-- results  -->
+
             <div
-              v-if="items && items.data"
-              v-for="item in items.data"
-              class="p-1"
+              class="absolute bg-white max-w-[700px] h-auto w-full position top-10"
             >
-              <NuxtLink
-                :to="`/item/${item.id}`"
-                class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100"
+              <div
+                v-if="items && items.data"
+                v-for="item in items.data"
+                class="p-1"
               >
-                <div class="flex items-center">
-                  <img class="rounded-md" width="40" :src="item.url" />
-                  <div class="truncate ml-2">{{ item.title }}</div>
-                </div>
-                <div class="truncate">${{ item.price / 100 }}</div>
-              </NuxtLink>
+                <NuxtLink
+                  :to="`/product/${item.id}`"
+                  class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100"
+                >
+                  <div class="flex items-center">
+                    <img class="rounded-md" width="40" :src="item.url" />
+                    <div class="truncate ml-2">{{ item.title }}</div>
+                  </div>
+                  <div class="truncate">${{ item.price / 100 }}</div>
+                </NuxtLink>
+              </div>
             </div>
           </div>
         </div>
@@ -146,8 +152,7 @@
           <span
             class="absolute flex items-center justify-center -right-[3px] top-0 bg-primary h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full"
           >
-            <!-- {{ userStore.cart.length }} -->
-            5
+            {{ userStore.cart.length }}
           </span>
           <div class="min-w-[40px]">
             <Icon
@@ -173,9 +178,32 @@
 import { useUserStore } from "@/stores/user"
 const userStore = useUserStore()
 
+const client = useSupabaseClient()
+const user = useSupabaseUser()
+
 let isAccountMenu = ref(false)
 let isSearching = ref(false)
 let searchItem = ref("")
 let isCartHover = ref(false)
 let items = ref(null)
+
+const searchByName = useDebounce(async () => {
+  isSearching.value = true
+  items.value = await useFetch(`/api/prisma/search-by-name/${searchItem.value}`)
+  isSearching.value = false
+}, 100)
+
+watch(
+  () => searchItem.value,
+  async () => {
+    if (!searchItem.value) {
+      setTimeout(() => {
+        items.value = ""
+        isSearching.value = false
+        return
+      }, 500)
+    }
+    searchByName()
+  }
+)
 </script>

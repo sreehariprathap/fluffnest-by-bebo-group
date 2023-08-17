@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // devtools: { enabled: true }
+  // devtools: { enabled: true },
   pages: true,
   css: ["~/assets/styles/main.scss"],
   postcss: {
@@ -16,9 +16,7 @@ export default defineNuxtConfig({
     "nuxt-lodash",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
-    // "@nuxtjs/tailwindcss",
-    // "@nuxtjs/i18n",
-    // "@nuxtjs/supabase",
+    "@nuxtjs/supabase",
   ],
   runtimeConfig: {
     public: {
