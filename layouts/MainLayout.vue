@@ -5,7 +5,7 @@
   >
     <TopMenu />
     <Loading v-if="userStore.isLoading" />
-    <div class="py-5">
+    <div class="py-5 min-h-[45vh]">
       <slot />
     </div>
     <Footer />

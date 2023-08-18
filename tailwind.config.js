@@ -25,12 +25,12 @@ module.exports = {
         "primary-light": "#C1F4C5",
         "dark-main": "#181818",
         "dark-secondary": "#272829",
-        light:"#F7F7F7"
+        light: "#F7F7F7",
       },
     },
   },
   daisyui: {
     themes: ["light"],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwind-scrollbar")],
 }
