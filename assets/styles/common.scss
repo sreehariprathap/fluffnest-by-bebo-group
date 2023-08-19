@@ -1,28 +1,27 @@
-@import url('./variables.scss');
-@import url('./texts.scss');
+@import url("./variables.scss");
+@import url("./texts.scss");
+@import url("./cards.scss");
 
 .app-dropdown {
   @apply select w-[5rem] select-sm focus:border-none;
   max-height: 0.5rem;
 }
 .app-btn {
-  @apply text-sm font-medium w-full bg-gradient-to-b from-primary to-primary-dark text-light rounded-md;
-  font-family: inherit;
-  padding: 0.8em 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s;
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.3);
-  }
-  &:active {
-    transform: scale(0.95);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  }
+  @apply btn rounded-full bg-sky-400 hover:bg-sky-500 text-white hover:shadow-sm capitalize btn-md;
+}
+.app-btn-secondary {
+  @apply btn rounded-full bg-white border-2 border-sky-400 hover:bg-white hover:border-sky-500 text-sky-500 hover:shadow-sm capitalize btn-md;
 }
 
-
+.app-input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  color: #646464;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  width: 12em;
+  transition: all ease-in-out 0.5s;
+  margin-right: -2rem;
+}

@@ -99,10 +99,10 @@
       <div class="max-w-[700px] w-full md:block hidden">
         <div class="relative">
           <div
-            class="flex items-center border-2 border-primary rounded-md w-full"
+            class="flex items-center border-2 border-primary rounded-md w-full relative bg-white "
           >
             <input
-              class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none input input-sm"
+              class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none input input-sm rounded-none bg-transparent"
               placeholder="kitchen accessories"
               type="text"
               v-model="searchItem"
@@ -111,7 +111,7 @@
               v-if="isSearching"
               name="eos-icons:loading"
               size="25"
-              class="mr-2"
+              class="mr-2 bg-white shadow-none"
             />
             <button class="flex items-center h-[100%] p-1.5 px-2 bg-primary">
               <Icon name="ph:magnifying-glass" size="20" color="#ffffff" />

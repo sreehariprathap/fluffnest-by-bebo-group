@@ -1,55 +1,49 @@
 <template>
-  <div
-    :id="`ProductComponent${product.id}`"
-    class="bg-white inline-block rounded hover:shadow-[0_0_10px_3px_rgba(0,0,0,0.07)] cursor-pointer px-4 py-2"
-  >
+  <div :id="`ProductComponent${product.id}`" class="app-card">
     <NuxtLink :to="`/product/${product.id}`">
       <img class="rounded-t" :src="product.url" />
 
-      <div id="ProductDetails">
-        <span class="flex items-center justify-start gap-3 px-1 pt-1">
-          <span class="text-[#FF6674] font-semibold">${{ priceComputed }}</span>
-          <span class="text-gray-500 text-sm  line-through"
-            >${{ oldPriceComputed }}</span
-          >
-        </span>
+      <div class="text-container">
+        <div id="ProductDetails">
+          <p class="app-product-title line-clamp-1">
+            {{ product.title.substring(0, 60) }}
+          </p>
+          <div class="flex items-center gap-1 relative my-1">
+            <span
+              class="bg-danger text-white text-[9px] font-semibold px-1.5 rounded-sm"
+              >Welcome Deal</span
+            >
+            <span
+              class="bg-light border text-warning text-[9px] font-semibold px-1.5 rounded-sm"
+              >Top Selling</span
+            >
+          </div>
+          <span class="relative -top-1.5 text-danger text-xs font-semibold">
+            Extra 5% off
+          </span>
+          <div class="flex items-end gap-2">
+            <h1 class="text-xl font-medium">${{ priceComputed }}</h1>
+            <h1 class="text-sm mb-0.5 font-light line-through text-gray-600">
+              {{ oldPriceComputed }}
+            </h1>
+          </div>
 
-        <span
-          class="px-1 relative -top-1.5 text-[#FF6674] text-xs font-semibold"
-        >
-          Extra 5% off
-        </span>
+          <p class="flex items-center pt-0.5 text-xs text-[#252525]">
+            5,000+ sold
+            <Icon
+              name="material-symbols:star-rate"
+              color="#FF8400"
+              class="ml-1.5"
+            />
+            <span class="text-[#FF8400]"> 4.7 </span>
+          </p>
 
-        <div class="flex items-center gap-1 px-1 relative -top-1">
-          <span
-            class="bg-[#FD374F] text-white text-[9px] font-semibold px-1.5 rounded-sm"
-            >Welcome Deal</span
-          >
-          <span
-            class="bg-[#F5F5F5] border text-[#C08562] text-[9px] font-semibold px-1.5 rounded-sm"
-            >Top Selling</span
-          >
+          <p class="pb-1">
+            <span class="text-primary text-xs font-semibold"
+              >Free Shipping</span
+            >
+          </p>
         </div>
-
-        <p class="flex items-center px-1 pt-0.5 text-xs text-[#252525]">
-          5,000+ sold
-          <Icon
-            name="material-symbols:star-rate"
-            color="#757575"
-            class="ml-1.5"
-          />
-          4.7
-        </p>
-
-        <p class="px-1 pt-0.5 text-xs text-[#252525]">
-          {{ product.title.substring(0, 60) }}
-        </p>
-
-        <p class="px-1 pb-1">
-          <span class="text-[#009A66] text-xs font-semibold"
-            >Free Shipping</span
-          >
-        </p>
       </div>
     </NuxtLink>
   </div>

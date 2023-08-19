@@ -29,5 +29,17 @@
     "termsAndConditionsEU": "Terms and Conditions for EU/EEA/UK Consumers (Transactions)",
     "allRightsReserved": "All rights reserved.",
     "increaseValueTelecom": "增值电信业务经营许可证 浙B2-20120091-8 浙公网安备 33010802002248号"
+  },
+  "labels": {
+    "percentageOff": "Extra {percentage}% off",
+    "freeShipping": "Free Shipping",
+    "FreeDelivery": "Free 11-day delivery over $ {price}"
+  },
+  "buttons": {
+    "addToCart": "add to cart",
+    "goToCart": "go to cart",
+    "login": "login",
+    "register": "register",
+    "login/register": "login / register"
   }
 }

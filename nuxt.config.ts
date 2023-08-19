@@ -28,4 +28,11 @@ export default defineNuxtConfig({
       script: [{ src: "https://js.stripe.com/v3/", defer: true }],
     },
   },
+  supabase: {
+    client: {
+        auth: {
+            persistSession: false //or true
+        }
+    }
+  }
 })
