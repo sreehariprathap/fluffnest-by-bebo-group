@@ -40,32 +40,32 @@
               type="radio"
               :disabled="true"
               name="rating-2"
-              class="mask mask-star-2 bg-orange-400"
+              class="mask mask-star-2 bg-warning"
             />
             <input
               type="radio"
               name="rating-2"
               :disabled="true"
-              class="mask mask-star-2 bg-orange-400"
+              class="mask mask-star-2 bg-warning"
               
             />
             <input
               type="radio"
               name="rating-2"
               :disabled="true"
-              class="mask mask-star-2 bg-orange-400"
+              class="mask mask-star-2 bg-warning"
             />
             <input
               type="radio"
               name="rating-2"
               :disabled="true"
-              class="mask mask-star-2 bg-orange-400"
+              class="mask mask-star-2 bg-warning"
             />
             <input
               type="radio"
               name="rating-2"
               :disabled="true"
-              class="mask mask-star-2 bg-orange-400"
+              class="mask mask-star-2 bg-warning"
               checked
             />
           </div>
@@ -80,7 +80,7 @@
             {{ $t('labels.FreeDelivery', { price: '25' }) }}
           </p>
 
-          <p class="text-success text-xs font-semibold pt-1">Free Shipping</p>
+          <p class="text-success text-xs font-semibold pt-1"> {{ $t('labels.freeShipping') }}</p>
 
           <div class="py-2" />
 
@@ -89,7 +89,7 @@
               @click="isInCart ? goToCart() : addToCart()"
               class="app-btn btn-wide"
             >
-              <div>{{ isInCart ? "go to cart" : "add to cart" }}  </div>
+              <div>{{ isInCart ? $t('buttons.goToCart') :  $t('buttons.addToCart')}}  </div>
             </button>
           </div>
         </div>

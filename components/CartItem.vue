@@ -10,8 +10,8 @@
           @click="isSelected = !isSelected"
           class="flex items-center justify-center h-[20px] w-[20px] rounded-full border mr-5 ml-2"
           :class="[
-            isHover ? 'border-[#FD374F]' : 'border-gray-300',
-            isSelected ? 'bg-[#FD374F]' : '',
+            isHover ? 'border-danger' : 'border-gray-300',
+            isSelected ? 'bg-danger' : '',
           ]"
         >
           <div class="h-[8px] w-[8px] rounded-full bg-white" />
@@ -25,7 +25,7 @@
       <div class="flex items-center justify-between w-full">
         <div class="flex items-center justify-between truncate">
           <span
-            class="sm:block hidden bg-[#FD374F] text-white text-[9px] font-semibold px-1.5 rounded-sm min-w-[80px]"
+            class="sm:block hidden bg-danger text-white text-[9px] font-semibold px-1.5 rounded-sm min-w-[80px]"
             >Welcome Deal</span
           >
           <div class="truncate sm:pl-2">{{ product.title }}</div>
@@ -41,16 +41,16 @@
         $ <span class="font-bold">{{ product.price / 100 }}</span>
       </div>
 
-      <p class="text-[#009A66] text-xs font-semibold pt-1">
+      <p class="text-success text-xs font-semibold pt-1">
         Free 11-day delivery over ￡8.28
       </p>
 
-      <p class="text-[#009A66] text-xs font-semibold pt-1">Free Shipping</p>
+      <p class="text-success text-xs font-semibold pt-1">Free Shipping</p>
 
       <div class="flex items-center justify-end">
         <button
           @click="removeFromCart()"
-          class="sm:hidden block -mt-0.5 hover:text-red-500"
+          class="sm:hidden block -mt-0.5 hover:text-danger"
         >
           <Icon name="material-symbols:delete-outline" size="20" />
         </button>

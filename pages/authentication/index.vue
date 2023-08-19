@@ -8,23 +8,59 @@
       </NuxtLink>
     </div>
     <div class="max-w-[400px] mx-auto px-2">
-      <div class="text-center my-6">Login / Register</div>
+      <div class="text-center my-6 font-bold capitalize">
+        {{ $t("buttons.login/register") }}
+      </div>
 
-      <button
-        @click="login('google')"
-        class="flex items-center justify-center gap-3 p-1.5 w-full border hover:bg-gray-100 rounded-full text-lg font-semibold"
-      >
-        <img class="w-full max-w-[30px]" src="/google-logo.png" />
-        <div>Google</div>
-      </button>
+      <!-- login with providers  -->
+      <div class="flex gap-2 justify-center">
+        <button
+          @click="login('google')"
+          class="bg-slate-100 p-2 rounded-full h-10 w-10 shadow-md"
+        >
+          <img class="w-full" src="/google-logo.png" />
+        </button>
 
-      <button
-        @click="login('github')"
-        class="mt-4 flex items-center justify-center gap-3 p-1.5 w-full border hover:bg-gray-100 rounded-full text-lg font-semibold"
+        <button
+          @click="login('github')"
+          class="bg-slate-100 p-2 rounded-full h-10 w-10 shadow-md"
+        >
+          <img class="w-full" src="/github-logo.png" />
+        </button>
+      </div>
+      <div class="divider mt-8">{{ $t('labels.or') }}</div>
+      <!-- login with form  -->
+      <div>
+  <div class="form-control">
+    <label class="label">
+      <span class="text-[12px]">{{ $t('labels.email') }}</span>
+    </label>
+    <input
+      type="text"
+      :placeholder=" $t('placeholders.email')"
+      class="input input-sm input-bordered"
+    />
+  </div>
+  <div class="form-control">
+    <label class="label">
+      <span class="text-[12px]">{{ $t('labels.password') }}</span>
+    </label>
+    <input
+      type="password"
+      :placeholder="$t('placeholders.password')"
+      class="input input-sm input-bordered"
+    />
+    <label class="label justify-end">
+      <a href="#" class="label-text-alt link link-hover text-[12px]">
+        {{ $t('labels.forgotPassword') }}</a
       >
-        <img class="w-full max-w-[30px]" src="/github-logo.png" />
-        <div>Github</div>
-      </button>
+    </label>
+  </div>
+  <div class="flex py-3 justify-center btn-lg mb-3">
+    <button class="app-btn">{{ $t('buttons.login') }}</button>
+  </div>
+</div>
+
     </div>
   </div>
 </template>

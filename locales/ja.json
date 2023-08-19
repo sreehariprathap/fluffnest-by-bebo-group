@@ -1,7 +1,56 @@
 {
   "hello": "こんにちは",
   "language": "言語",
-  "sellOnBebo": "ベボで売る",
+  "sellOnBebo": "Bebo で販売する",
   "help": "ヘルプ",
-  "buyerProtection": "購入者保護"
+  "buyerProtection": "購入者保護",
+  "account": "アカウント",
+  "welcome": "Fluffnest へようこそ！",
+  "myOrders": "私の注文",
+  "signOut": "サインアウト",
+
+  "footer": {
+    "help": "ヘルプ",
+    "helpCenter": "ヘルプセンター、紛争とレポート、購入者保護、知的財産権侵害の報告、規制情報",
+    "fluffNestMultiLanguage": "FluffNestマルチ言語サイト",
+    "languages": "ロシア語、ポルトガル語、スペイン語、フランス語、ドイツ語、イタリア語、オランダ語、トルコ語、日本語、韓国語、タイ語、ベトナム語、アラビア語、ヘブライ語、ポーランド語",
+    "browseByCategory": "カテゴリで閲覧",
+    "popular": "人気商品、製品、プロモーション、低価格、高い価値、レビュー、ブログ、セラーポータル、ブラックフライデー、FluffNestアシスタント",
+    "beboGroup": "Beboグループ",
+    "beboGroupSites": "Bebo グループのウェブサイト、FluffNest"
+  },
+  "footerSub": {
+    "intellectualProtection": "知的財産保護",
+    "privacyPolicy": "プライバシーポリシー",
+    "sitemap": "サイトマップ",
+    "termsOfUse": "利用規約",
+    "infoForEUConsumers": "EU消費者向け情報",
+    "transactionServicesAgreement": "EU/英国以外の消費者向け取引サービス契約",
+    "termsAndConditionsEU": "EU/EEA/英国消費者向け利用規約（取引条件）",
+    "allRightsReserved": "全著作権所有。",
+    "increaseValueTelecom": "付加価値電気通信事業免許 浙B2-20120091-8 浙公安備 33010802002248号"
+  },
+  "placeholders": {
+    "email": "メールアドレス",
+    "password": "パスワード"
+  },
+  "labels": {
+    "percentageOff": "追加 {percentage}% オフ",
+    "freeShipping": "送料無料",
+    "FreeDelivery": "11日間の無料配送：{price}ドル以上",
+    "welcomeDeal": "ウェルカムディール",
+    "topSelling": "トップセリング",
+    "sold": "売れました",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "or": "または"
+  },
+  "buttons": {
+    "addToCart": "カートに追加",
+    "goToCart": "カートへ進む",
+    "login": "ログイン",
+    "register": "新規登録",
+    "login/register": "ログイン / 新規登録"
+  }
 }

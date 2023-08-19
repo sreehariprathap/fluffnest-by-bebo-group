@@ -10,16 +10,20 @@
           </p>
           <div class="flex items-center gap-1 relative my-1">
             <span
-              class="bg-danger text-white text-[9px] font-semibold px-1.5 rounded-sm"
-              >Welcome Deal</span
+              class="bg-danger text-white text-[9px] font-semibold px-1.5 rounded-sm py-1"
+              >
+              {{ $t('labels.welcomeDeal') }}
+              </span
             >
             <span
-              class="bg-light border text-warning text-[9px] font-semibold px-1.5 rounded-sm"
-              >Top Selling</span
+              class="bg-light border text-warning text-[9px] font-semibold px-1.5 rounded-sm py-1"
+              >
+              {{ $t('labels.topSelling') }}
+              </span
             >
           </div>
           <span class="relative -top-1.5 text-danger text-xs font-semibold">
-            Extra 5% off
+            {{ $t('labels.percentageOff', { percentage: '5' }) }}
           </span>
           <div class="flex items-end gap-2">
             <h1 class="text-xl font-medium">${{ priceComputed }}</h1>
@@ -28,8 +32,8 @@
             </h1>
           </div>
 
-          <p class="flex items-center pt-0.5 text-xs text-[#252525]">
-            5,000+ sold
+          <p class="flex items-center pt-0.5 text-xs text-dark-main">
+            5,000+ {{ $t('labels.sold') }}
             <Icon
               name="material-symbols:star-rate"
               color="#FF8400"
@@ -40,7 +44,7 @@
 
           <p class="pb-1">
             <span class="text-primary text-xs font-semibold"
-              >Free Shipping</span
+              >{{ $t('labels.freeShipping') }}</span
             >
           </p>
         </div>

@@ -30,10 +30,21 @@
     "allRightsReserved": "All rights reserved.",
     "increaseValueTelecom": "增值电信业务经营许可证 浙B2-20120091-8 浙公网安备 33010802002248号"
   },
+  "placeholders": {
+    "email": "email",
+    "password": "password"
+  },
   "labels": {
     "percentageOff": "Extra {percentage}% off",
     "freeShipping": "Free Shipping",
-    "FreeDelivery": "Free 11-day delivery over $ {price}"
+    "FreeDelivery": "Free 11-day delivery over $ {price}",
+    "welcomeDeal": "Welcome Deal",
+    "topSelling": "Top Selling",
+    "sold": "sold",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "or": "OR"
   },
   "buttons": {
     "addToCart": "add to cart",

@@ -1,9 +1,13 @@
 {
   "hello": "Bonjour",
   "language": "Langue",
-  "sellOnBebo": "Vendre sur bebo",
+  "sellOnBebo": "Vendre sur Bebo",
   "help": "Aide",
   "buyerProtection": "Protection de l'acheteur",
+  "account": "Compte",
+  "welcome": "Bienvenue sur Fluffnest !",
+  "myOrders": "Mes commandes",
+  "signOut": "Déconnexion",
 
   "footer": {
     "help": "Aide",
@@ -25,5 +29,28 @@
     "termsAndConditionsEU": "Conditions générales pour les consommateurs de l'UE/EEE/RU (Transactions)",
     "allRightsReserved": "Tous droits réservés.",
     "increaseValueTelecom": "增值电信业务经营许可证 浙B2-20120091-8 浙公网安备 33010802002248号"
+  },
+  "placeholders": {
+    "email": "adresse e-mail",
+    "password": "mot de passe"
+  },
+  "labels": {
+    "percentageOff": "{percentage}% de réduction supplémentaire",
+    "freeShipping": "Livraison gratuite",
+    "FreeDelivery": "Livraison gratuite en 11 jours pour plus de {price} $",
+    "welcomeDeal": "Offre de Bienvenue",
+    "topSelling": "Meilleures Ventes",
+    "sold": "vendu",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "or": "OU"
+  },
+  "buttons": {
+    "addToCart": "Ajouter au panier",
+    "goToCart": "Aller au panier",
+    "login": "Se connecter",
+    "register": "S'inscrire",
+    "login/register": "Se connecter / S'inscrire"
   }
 }

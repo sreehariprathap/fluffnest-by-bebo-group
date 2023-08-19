@@ -20,7 +20,7 @@
         <li
           @mouseenter="isAccountMenu = true"
           @mouseleave="isAccountMenu = false"
-          class="relative flex items-center px-3 h-full text-sm font-normal app-list-text border-none gap-2"
+          class="relative flex items-center px-3 h-full text-sm font-normal app-list-text border-none gap-2 mr-10 w-44"
           :class="
             isAccountMenu ? 'bg-white  z-40 shadow-xl' : 'border border-primary'
           "
@@ -31,19 +31,19 @@
 
           <div
             id="AccountMenu"
-            class="absolute bg-white w-[213.5px] text-dark-main z-40 top-[38px] -left-[68.5px] border-none hover:border shadow-2xl"
+            class="absolute bg-white min-w-[213.5px] text-dark-main z-40 top-[38px] -left-[37.5px] border-none hover:border shadow-2xl"
           >
             <div
               v-if="isAccountMenu"
-              class="px-3 py-2 flex flex-col items-start"
+              class="px-3 py-2 flex flex-col items-center"
             >
               <div v-if="!user" class="flex flex-col gap-3 items-center">
-                <div class="text-semibold text-[15px] my-4">
+                <div class="text-semibold text-[15px] my-2">
                   {{ $t("welcome") }}
                 </div>
                 <div class="flex items-center gap-1 mb-3 w-full">
                   <NuxtLink to="/authentication" class="app-btn">
-                    Login / Register
+                    {{ $t("buttons.login/register") }}
                   </NuxtLink>
                 </div>
               </div>
@@ -150,7 +150,7 @@
           @mouseleave="isCartHover = false"
         >
           <span
-            class="absolute flex items-center justify-center -right-[3px] top-0 bg-primary h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full"
+            class="absolute flex items-center justify-center -right-[3px] top-0 bg-primary h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full bg-primary-dark"
           >
             {{ userStore.cart.length }}
           </span>
