@@ -10,8 +10,8 @@
           @click="isSelected = !isSelected"
           class="flex items-center justify-center h-[20px] w-[20px] rounded-full border mr-5 ml-2"
           :class="[
-            isHover ? 'border-danger' : 'border-gray-300',
-            isSelected ? 'bg-danger' : '',
+            isHover ? 'border-primary' : 'border-gray-300',
+            isSelected ? 'bg-sky-400' : '',
           ]"
         >
           <div class="h-[8px] w-[8px] rounded-full bg-white" />

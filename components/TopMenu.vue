@@ -1,7 +1,7 @@
 <template>
   <div
     id="top-menu"
-    class="w-full bg-slate-100 border-b flex flex-col justify-end items-center"
+    class="w-full bg-sky-50 border-b flex flex-col justify-end items-center"
   >
     <div class="hidden md:flex justify-end w-full px-4 border-b py-1">
       <ul class="flex items-center text-xs text-dark-main font-light px-2 h-10">
@@ -22,7 +22,7 @@
           @mouseleave="isAccountMenu = false"
           class="relative flex items-center px-3 h-full text-sm font-normal app-list-text border-none gap-2 mr-10 w-44"
           :class="
-            isAccountMenu ? 'bg-white  z-40 shadow-main' : 'border border-primary'
+            isAccountMenu ? 'bg-light  z-40 shadow-main' : 'border border-primary'
           "
         >
           <Icon name="ph:user-thin" size="19" />
@@ -31,7 +31,7 @@
 
           <div
             id="AccountMenu"
-            class="absolute bg-white min-w-[213.5px] text-dark-main z-40 top-[38px] -left-[37.5px] border-none hover:border shadow-main"
+            class="absolute bg-light min-w-[213.5px] text-dark-main z-40 top-[38px] -left-[37.5px] border-none hover:border shadow-main"
           >
             <div
               v-if="isAccountMenu"
@@ -86,7 +86,7 @@
       </ul>
     </div>
     <!-- second level  -->
-    <div class="navbar bg-slate-100 px-4 flex gap-10 justify-between">
+    <div class="navbar bg-sky-50 px-4 flex gap-10 justify-between">
       <!-- logo -->
       <div>
         <NuxtLink to="/">
@@ -104,7 +104,7 @@
             class="flex items-center border-2 border-primary rounded-md w-full relative bg-white"
           >
             <input
-              class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none input input-sm rounded-none bg-transparent"
+              class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none input input-sm rounded-none bg-transparent shadow-main"
               :placeholder="$t('placeholders.search')"
               type="text"
               v-model="searchItem"
@@ -115,14 +115,14 @@
               size="25"
               class="mr-2 bg-white shadow-none"
             />
-            <button class="flex items-center h-[100%] p-1.5 px-2 bg-primary">
+            <button class="flex items-center h-[100%] p-1.5 px-2 bg-white mr-1">
               <Icon name="ph:magnifying-glass" size="20" class="" />
             </button>
 
             <!-- results  -->
 
             <div
-              class="absolute bg-white max-w-[700px] h-auto w-full position top-10 z-10"
+              class="absolute bg-light max-w-[700px] h-auto w-full position top-10 z-10"
             >
               <div
                 v-if="items && items.data"
@@ -152,7 +152,7 @@
           @mouseleave="isCartHover = false"
         >
           <span
-            class="absolute flex items-center justify-center -right-[3px] top-0 bg-primary h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full bg-primary-dark"
+            class="absolute flex items-center justify-center -right-[3px] top-0 bg-primary h-[17px] min-w-[17px] text-xs text-light px-0.5 rounded-full bg-primary-dark"
           >
             {{ userStore.cart.length }}
           </span>

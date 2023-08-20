@@ -17,7 +17,7 @@
           <div v-if="!user" class="flex text-center">
             <NuxtLink
               to="/authentication"
-              class="app-btn w-full text-white text-xl font-semibold p-1.5 py-2.5 rounded-md mt-4"
+              class="app-btn w-full text-light text-xl font-semibold p-1.5 py-2.5 rounded-md mt-4"
             >
             {{ $t('buttons.login') }}
 
@@ -33,7 +33,6 @@
               {{ $t('labels.shoppingCart') }} ({{ userStore.cart.length }})
             </div>
           </div>
-
 
           <div id="Items" class="bg-light shadow-main rounded-lg p-4 mt-4">
             <div v-for="product in userStore.cart">
@@ -52,7 +51,8 @@
             <div class="text-2xl font-extrabold mb-2">              {{ $t('labels.summary') }}
               </div>
             <div class="flex items-center justify-between my-4">
-              <div class="font-semibold">              {{ $t('labels.total') }}
+              <div class="font-semibold">              
+                {{ $t('labels.total') }}
               </div>
               <div class="text-2xl font-semibold">
                 $ <span class="font-extrabold">{{ totalPriceComputed }}</span>
@@ -60,7 +60,7 @@
             </div>
             <button
               @click="goToCheckout"
-              class="flex items-center justify-center bg-[#FD374F] w-full text-white text-[21px] font-semibold p-1.5 rounded-full mt-4"
+              class="flex items-center justify-center bg-primary app-btn w-full text-light text-[21px] font-semibold p-1.5 rounded-full mt-4"
             >
               {{ $t('labels.checkout') }}
             </button>

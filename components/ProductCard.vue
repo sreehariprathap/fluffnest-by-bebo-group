@@ -10,7 +10,7 @@
           </p>
           <div class="flex items-center gap-1 relative my-1">
             <span
-              class="bg-danger text-white text-[9px] font-semibold px-1.5 rounded-sm py-1"
+              class="bg-danger text-light text-[9px] font-semibold px-1.5 rounded-sm py-1"
               >
               {{ $t('labels.welcomeDeal') }}
               </span

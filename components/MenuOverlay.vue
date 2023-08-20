@@ -1,5 +1,5 @@
 <template>
-  <div id="MenuOverlay" class="fixed z-50 bottom-0 h-full w-full bg-white px-3">
+  <div id="MenuOverlay" class="fixed z-50 bottom-0 h-full w-full bg-light px-3">
     <div class="flex items-center justify-between py-5">
       <NuxtLink to="/" @click="userStore.isMenuOverlay = false">
         <img width="170" src="@/assets/fluffnest-light.png" />
@@ -34,7 +34,7 @@
             <span class="pl-4">Cart</span>
           </div>
           <div
-            class="flex items-center justify-center bg-[#FF4646] h-[35px] min-w-[35px] text-lg text-white rounded-full"
+            class="flex items-center justify-center bg-danger h-[35px] min-w-[35px] text-lg text-light rounded-full"
           >
             {{ userStore.cart.length }}
           </div>
