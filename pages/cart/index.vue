@@ -10,14 +10,17 @@
           <!-- no items section icon  -->
           <img class="mx-auto" width="250" src="@/assets/cart-empty.webp" />
 
-          <div class="text-xl text-center mt-4">No items yet?</div>
+          <div class="text-xl text-center mt-4">
+            {{ $t('labels.noItems') }}
+          </div>
 
           <div v-if="!user" class="flex text-center">
             <NuxtLink
               to="/authentication"
               class="app-btn w-full text-white text-xl font-semibold p-1.5 py-2.5 rounded-md mt-4"
             >
-              Sign in
+            {{ $t('buttons.login') }}
+
             </NuxtLink>
           </div>
         </div>
@@ -27,15 +30,10 @@
         <div class="md:w-[65%]">
           <div class="bg-white rounded-lg p-4">
             <div class="text-2xl font-bold mb-2">
-              Shopping Cart ({{ userStore.cart.length }})
+              {{ $t('labels.shoppingCart') }} ({{ userStore.cart.length }})
             </div>
           </div>
 
-          <div class="bg-[#FEEEEF] rounded-lg p-4 mt-4">
-            <div class="text-red-500 font-bold">
-              Welcome Deal applicable on 1 item only
-            </div>
-          </div>
 
           <div id="Items" class="bg-white rounded-lg p-4 mt-4">
             <div v-for="product in userStore.cart">
@@ -51,9 +49,11 @@
         <div class="md:hidden block my-4" />
         <div class="md:w-[35%]">
           <div id="Summary" class="bg-white rounded-lg p-4">
-            <div class="text-2xl font-extrabold mb-2">Summary</div>
+            <div class="text-2xl font-extrabold mb-2">              {{ $t('labels.summary') }}
+              </div>
             <div class="flex items-center justify-between my-4">
-              <div class="font-semibold">Total</div>
+              <div class="font-semibold">              {{ $t('labels.total') }}
+              </div>
               <div class="text-2xl font-semibold">
                 $ <span class="font-extrabold">{{ totalPriceComputed }}</span>
               </div>
@@ -62,12 +62,12 @@
               @click="goToCheckout"
               class="flex items-center justify-center bg-[#FD374F] w-full text-white text-[21px] font-semibold p-1.5 rounded-full mt-4"
             >
-              Checkout
+              {{ $t('labels.checkout') }}
             </button>
           </div>
 
           <div id="PaymentProtection" class="bg-white rounded-lg p-4 mt-4">
-            <div class="text-lg font-semibold mb-2">Payment methods</div>
+            <div class="text-lg font-semibold mb-2">{{ $t('labels.paymentMethods') }}</div>
             <div class="flex items-center justify-start gap-8 my-4">
               <div v-for="card in cards">
                 <img class="h-6" :src="card" />
@@ -76,10 +76,10 @@
 
             <div class="border-b" />
 
-            <div class="text-lg font-semibold mb-2 mt-2">Buyer Protection</div>
+            <div class="text-lg font-semibold mb-2 mt-2">{{ $t('labels.buyerProtection') }}</div>
             <p class="my-2">
-              Get full refund if the item is not as described or if is not
-              delivered
+              {{ $t('texts.buyerProtection') }}
+ 
             </p>
           </div>
         </div>

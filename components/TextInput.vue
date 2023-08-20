@@ -4,16 +4,16 @@
       <input
         :placeholder="placeholder"
         :maxlength="max"
-        class="w-full bg-white text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none"
+        class="w-full bg-white text-gray-800 border text-sm border-light rounded-lg p-3 placeholder-gray-500 focus:outline-none"
         @focus="isFocused = true"
         @blur="isFocused = false"
-        :class="({ 'border-gray-900': isFocused }, { 'border-red-500': error })"
+        :class="({ 'border-gray-900': isFocused }, { 'border-danger': error })"
         :type="inputType"
         v-model="inputComputed"
         autocomplete="off"
       />
     </client-only>
-    <span v-if="error" class="text-red-500 text-[14px] font-semibold">
+    <span v-if="error" class="text-danger text-[14px] font-semibold">
       {{ error }}
     </span>
   </div>

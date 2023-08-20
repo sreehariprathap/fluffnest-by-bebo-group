@@ -32,7 +32,8 @@
   },
   "placeholders": {
     "email": "メールアドレス",
-    "password": "パスワード"
+    "password": "パスワード",
+    "search": "ここで検索"
   },
   "labels": {
     "percentageOff": "追加 {percentage}% オフ",
@@ -44,13 +45,41 @@
     "email": "メールアドレス",
     "password": "パスワード",
     "forgotPassword": "パスワードをお忘れですか？",
-    "or": "または"
+    "or": "または",
+
+    "noOrderHistory": "注文履歴がありません",
+    "orders": "注文",
+    "deliveryAddress": "配送先住所",
+    "buyerProtection": "購入者保護",
+    "paymentMethods": "支払い方法",
+    "checkout": "チェックアウト",
+    "summary": "サマリー",
+    "total": "合計",
+    "noItems": "まだアイテムはありませんか？",
+    "orderId": "注文ID",
+
+    "shoppingCart": "ショッピングカート",
+    "shippingAddress": "配送先住所",
+    "free": "無料",
+    "totalShipping": "合計送料",
+    "addAddress": "新しい住所を追加",
+    "country": "国",
+    "city": "市町村",
+    "zip": "郵便番号",
+    "address": "住所",
+    "contactname": "担当者名",
+    "updateAddress": "住所を更新"
   },
   "buttons": {
     "addToCart": "カートに追加",
     "goToCart": "カートへ進む",
     "login": "ログイン",
     "register": "新規登録",
-    "login/register": "ログイン / 新規登録"
+    "login/register": "ログイン / 新規登録",
+    "placeOrder": "注文する"
+  },
+  "texts": {
+    "buyerProtection": "商品が説明と異なる場合や配達されない場合、全額返金されます",
+    "paymentProtection": "FluffNestはあなたの情報と支払いを安全に保ちます"
   }
 }

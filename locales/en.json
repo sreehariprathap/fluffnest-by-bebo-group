@@ -32,7 +32,8 @@
   },
   "placeholders": {
     "email": "email",
-    "password": "password"
+    "password": "password",
+    "search": "search here"
   },
   "labels": {
     "percentageOff": "Extra {percentage}% off",
@@ -44,13 +45,40 @@
     "email": "Email",
     "password": "Password",
     "forgotPassword": "Forgot password?",
-    "or": "OR"
+    "or": "OR",
+    "noOrderHistory": "You have no order history",
+    "orders": "My orders",
+    "deliveryAddress": "Delivery Address",
+    "buyerProtection": "Buyer Protection",
+    "paymentMethods": "Payment methods",
+    "checkout": "Checkout",
+    "summary": "Summary",
+    "total": "Total",
+    "noItems": "No Items yet ?",
+    "orderId": "Order ID",
+
+    "shoppingCart": "Shopping Cart",
+    "shippingAddress": "Shipping Address",
+    "free":"Free",
+    "totalShipping":"Total Shipping",
+    "addAddress":"Add New Address",
+    "country":"Country",
+    "city":"City",
+    "zip":"Zip Code",
+    "address":"Address",
+    "contactname":"Contact name",
+    "updateAddress":"Update Address"
   },
   "buttons": {
     "addToCart": "add to cart",
     "goToCart": "go to cart",
     "login": "login",
     "register": "register",
-    "login/register": "login / register"
+    "login/register": "login / register",
+    "placeOrder": "Place order"
+  },
+  "texts": {
+    "buyerProtection": "Get full refund if the item is not as described or if is not delivered",
+    "paymentProtection": "FluffNest keeps your information and payment safe"
   }
 }

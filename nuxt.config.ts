@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   supabase: {
     client: {
         auth: {
-            persistSession: false //or true
+            persistSession: true //or true
         }
     }
   }

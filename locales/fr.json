@@ -32,7 +32,8 @@
   },
   "placeholders": {
     "email": "adresse e-mail",
-    "password": "mot de passe"
+    "password": "mot de passe",
+    "search": "rechercher ici"
   },
   "labels": {
     "percentageOff": "{percentage}% de réduction supplémentaire",
@@ -44,13 +45,41 @@
     "email": "Adresse e-mail",
     "password": "Mot de passe",
     "forgotPassword": "Mot de passe oublié ?",
-    "or": "OU"
+    "or": "OU",
+
+    "noOrderHistory": "Vous n'avez pas d'historique de commande",
+    "orders": "Mes commandes",
+    "deliveryAddress": "Adresse de livraison",
+    "buyerProtection": "Protection de l'acheteur",
+    "paymentMethods": "Méthodes de paiement",
+    "checkout": "Paiement",
+    "summary": "Résumé",
+    "total": "Total",
+    "noItems": "Aucun article pour le moment ?",
+    "orderId": "Numéro de commande",
+
+    "shoppingCart": "Panier",
+    "shippingAddress": "Adresse de Livraison",
+    "free": "Gratuit",
+    "totalShipping": "Frais de Livraison Total",
+    "addAddress": "Ajouter une Nouvelle Adresse",
+    "country": "Pays",
+    "city": "Ville",
+    "zip": "Code Postal",
+    "address": "Adresse",
+    "contactname": "Nom du Contact",
+    "updateAddress": "Mettre à Jour l'Adresse"
   },
   "buttons": {
     "addToCart": "Ajouter au panier",
     "goToCart": "Aller au panier",
     "login": "Se connecter",
     "register": "S'inscrire",
-    "login/register": "Se connecter / S'inscrire"
+    "login/register": "Se connecter / S'inscrire",
+    "placeOrder": "Passer la commande"
+  },
+  "texts": {
+    "buyerProtection": "Obtenez un remboursement complet si l'article n'est pas conforme à la description ou s'il n'est pas livré",
+    "paymentProtection": "FluffNest sécurise vos informations et vos paiements"
   }
 }

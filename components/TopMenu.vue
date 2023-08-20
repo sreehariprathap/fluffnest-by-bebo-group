@@ -48,9 +48,11 @@
                 </div>
               </div>
               <div v-if="user">
-                <ul class="flex flex-col gap-3 ">
+                <ul class="flex flex-col gap-3">
                   <li class="px-3 app-list-text text-sm font-normal">
-                    {{ $t("myOrders") }}
+                    <NuxtLink to="/orders">
+                      {{ $t("myOrders") }}
+                    </NuxtLink>
                   </li>
                   <li
                     v-if="user"
@@ -99,11 +101,11 @@
       <div class="max-w-[700px] w-full md:block hidden">
         <div class="relative">
           <div
-            class="flex items-center border-2 border-primary rounded-md w-full relative bg-white "
+            class="flex items-center border-2 border-primary rounded-md w-full relative bg-white"
           >
             <input
               class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none input input-sm rounded-none bg-transparent"
-              placeholder="kitchen accessories"
+              :placeholder="$t('placeholders.search')"
               type="text"
               v-model="searchItem"
             />
@@ -114,13 +116,13 @@
               class="mr-2 bg-white shadow-none"
             />
             <button class="flex items-center h-[100%] p-1.5 px-2 bg-primary">
-              <Icon name="ph:magnifying-glass" size="20" color="#ffffff" />
+              <Icon name="ph:magnifying-glass" size="20" class="" />
             </button>
 
             <!-- results  -->
 
             <div
-              class="absolute bg-white max-w-[700px] h-auto w-full position top-10"
+              class="absolute bg-white max-w-[700px] h-auto w-full position top-10 z-10"
             >
               <div
                 v-if="items && items.data"
@@ -129,7 +131,7 @@
               >
                 <NuxtLink
                   :to="`/product/${item.id}`"
-                  class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100"
+                  class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 py-3 px-2"
                 >
                   <div class="flex items-center">
                     <img class="rounded-md" width="40" :src="item.url" />

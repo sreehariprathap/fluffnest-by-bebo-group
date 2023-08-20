@@ -4,7 +4,7 @@
       <div class="md:flex gap-4 justify-between mx-auto w-full">
         <div class="md:w-[65%]">
           <div class="bg-white rounded-lg p-4">
-            <div class="text-xl font-semibold mb-2">Shipping Address</div>
+            <div class="text-xl font-semibold mb-2">{{ $t('labels.shippingAddress') }}</div>
 
             <div v-if="currentAddress && currentAddress.data">
               <NuxtLink
@@ -12,34 +12,34 @@
                 class="flex items-center pb-2 text-blue-500 hover:text-red-400"
               >
                 <Icon name="mdi:plus" size="18" class="mr-2" />
-                Update Address
+                {{ $t('labels.updateAddress') }}
               </NuxtLink>
 
               <div class="pt-2 border-t">
-                <div class="underline pb-1">Delivery Address</div>
+                <div class="underline pb-1">{{ $t('labels.deliveryAddress') }}</div>
                 <ul class="text-xs">
                   <li class="flex items-center gap-2">
-                    <div>Contact name:</div>
+                    <div>{{ $t('labels.contactName') }}:</div>
                     <div class="font-bold">{{ currentAddress.data.name }}</div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>Address:</div>
+                    <div>{{ $t('labels.address') }}:</div>
                     <div class="font-bold">
                       {{ currentAddress.data.address }}
                     </div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>Zip Code:</div>
+                    <div>{{ $t('labels.zip') }}:</div>
                     <div class="font-bold">
                       {{ currentAddress.data.zipcode }}
                     </div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>City:</div>
+                    <div>{{ $t('labels.city') }}:</div>
                     <div class="font-bold">{{ currentAddress.data.city }}</div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>Country:</div>
+                    <div>{{ $t('labels.country') }}:</div>
                     <div class="font-bold">
                       {{ currentAddress.data.country }}
                     </div>
@@ -54,7 +54,7 @@
               class="flex items-center text-blue-500 hover:text-red-400"
             >
               <Icon name="mdi:plus" size="18" class="mr-2" />
-              Add New Address
+              {{ $t('labels.addAddress') }}
             </NuxtLink>
           </div>
 
@@ -68,17 +68,17 @@
         <div class="md:hidden block my-4" />
         <div class="md:w-[35%]">
           <div id="PlaceOrder" class="bg-white rounded-lg p-4">
-            <div class="text-2xl font-extrabold mb-2">Summary</div>
+            <div class="text-2xl font-extrabold mb-2">{{ $t('labels.summary') }}</div>
 
             <div class="flex items-center justify-between my-4">
-              <div class="">Total Shipping</div>
-              <div class="">Free</div>
+              <div class="">{{ $t('labels.totalShipping') }}</div>
+              <div class="">{{ $t('labels.free') }}</div>
             </div>
 
             <div class="border-t" />
 
             <div class="flex items-center justify-between my-4">
-              <div class="font-semibold">Total</div>
+              <div class="font-semibold">{{ $t('labels.total') }}</div>
               <div class="text-2xl font-semibold">
                 $ <span class="font-extrabold">{{ total / 100 }}</span>
               </div>
@@ -103,7 +103,7 @@
                 :class="isProcessing ? 'opacity-70' : 'opacity-100'"
               >
                 <Icon v-if="isProcessing" name="eos-icons:loading" />
-                <div v-else>Place order</div>
+                <div v-else>{{ $t('buttons.placeOrder') }}</div>
               </button>
             </form>
           </div>
@@ -111,7 +111,7 @@
           <div class="bg-white rounded-lg p-4 mt-4">
             <div class="text-lg font-semibold mb-2 mt-2">FluffNest</div>
             <p class="my-2">
-              FluffNest keeps your information and payment safe
+              {{ $t('texts.paymentProtection') }}
             </p>
           </div>
         </div>
