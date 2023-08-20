@@ -56,7 +56,7 @@
                   </li>
                   <li
                     v-if="user"
-                    @click="client.auth.signOut()"
+                    @click="signOut()"
                     class="px-3 app-list-text text-red-400 text-sm font-normal"
                   >
                     {{ $t("signOut") }}
@@ -208,4 +208,15 @@ watch(
     searchByName()
   }
 )
+
+// Function to handle sign out
+const signOut = async () => {
+  try {
+    await client.auth.signOut()
+    userStore.resetUser() // Reset user information in your user store
+    // You can also navigate to the sign-in page or perform other actions
+  } catch (error) {
+    console.error("Error signing out:", error.message)
+  }
+}
 </script>
