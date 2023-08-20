@@ -8,7 +8,6 @@
   "welcome": "Bienvenue sur Fluffnest !",
   "myOrders": "Mes commandes",
   "signOut": "Déconnexion",
-
   "footer": {
     "help": "Aide",
     "helpCenter": "Centre d'aide, Litiges et rapports, Protection de l'acheteur, Signalement de violation des DPI, Information réglementée",
@@ -33,7 +32,12 @@
   "placeholders": {
     "email": "adresse e-mail",
     "password": "mot de passe",
-    "search": "rechercher ici"
+    "search": "rechercher ici",
+    "name": "Nom du contact",
+    "address": "Adresse",
+    "zip": "Code postal",
+    "country": "Pays",
+    "city": "Ville"
   },
   "labels": {
     "percentageOff": "{percentage}% de réduction supplémentaire",
@@ -46,7 +50,7 @@
     "password": "Mot de passe",
     "forgotPassword": "Mot de passe oublié ?",
     "or": "OU",
-
+    "addressDetails": "Détails de l'adresse",
     "noOrderHistory": "Vous n'avez pas d'historique de commande",
     "orders": "Mes commandes",
     "deliveryAddress": "Adresse de livraison",
@@ -57,7 +61,6 @@
     "total": "Total",
     "noItems": "Aucun article pour le moment ?",
     "orderId": "Numéro de commande",
-
     "shoppingCart": "Panier",
     "shippingAddress": "Adresse de Livraison",
     "free": "Gratuit",
@@ -68,18 +71,28 @@
     "zip": "Code Postal",
     "address": "Adresse",
     "contactname": "Nom du Contact",
-    "updateAddress": "Mettre à Jour l'Adresse"
+    "updateAddress": "Mettre à Jour l'Adresse",
+    "paymentSuccess": "Paiement réussi"
   },
   "buttons": {
     "addToCart": "Ajouter au panier",
     "goToCart": "Aller au panier",
     "login": "Se connecter",
     "register": "S'inscrire",
+    "updateAddress": "Mettre à Jour l'Adresse",
     "login/register": "Se connecter / S'inscrire",
     "placeOrder": "Passer la commande"
   },
   "texts": {
     "buyerProtection": "Obtenez un remboursement complet si l'article n'est pas conforme à la description ou s'il n'est pas livré",
-    "paymentProtection": "FluffNest sécurise vos informations et vos paiements"
+    "paymentProtection": "FluffNest sécurise vos informations et vos paiements",
+    "thankYouForPayment": "Merci ! Nous avons bien reçu votre paiement."
+  },
+  "errors": {
+    "contactName": "Un nom de contact est requis",
+    "address": "Une adresse est requise",
+    "zipCode": "Un code postal est requis",
+    "city": "Une ville est requise",
+    "country": "Un pays est requis"
   }
 }

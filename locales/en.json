@@ -8,7 +8,6 @@
   "welcome": "Welcome to fluffnest!",
   "myOrders": "My orders",
   "signOut": "Sign out",
-
   "footer": {
     "help": "Help",
     "helpCenter": "Help Center, Disputes & Reports, Buyer Protection, Report IPR infringement, Regulated Information",
@@ -33,7 +32,12 @@
   "placeholders": {
     "email": "email",
     "password": "password",
-    "search": "search here"
+    "search": "search here",
+    "name": "Contact Name",
+    "address": "Address",
+    "zip": "Zip Code",
+    "country": "Country",
+    "city": "City"
   },
   "labels": {
     "percentageOff": "Extra {percentage}% off",
@@ -56,18 +60,19 @@
     "total": "Total",
     "noItems": "No Items yet ?",
     "orderId": "Order ID",
-
     "shoppingCart": "Shopping Cart",
     "shippingAddress": "Shipping Address",
-    "free":"Free",
-    "totalShipping":"Total Shipping",
-    "addAddress":"Add New Address",
-    "country":"Country",
-    "city":"City",
-    "zip":"Zip Code",
-    "address":"Address",
-    "contactname":"Contact name",
-    "updateAddress":"Update Address"
+    "free": "Free",
+    "totalShipping": "Total Shipping",
+    "addAddress": "Add New Address",
+    "country": "Country",
+    "city": "City",
+    "zip": "Zip Code",
+    "address": "Address",
+    "contactName": "Contact name",
+    "updateAddress": "Update Address",
+    "addressDetails": "Address Details",
+    "paymentSuccess":"Payment Successful"
   },
   "buttons": {
     "addToCart": "add to cart",
@@ -75,10 +80,19 @@
     "login": "login",
     "register": "register",
     "login/register": "login / register",
-    "placeOrder": "Place order"
+    "placeOrder": "Place order",
+    "updateAddress": "Update Address"
   },
   "texts": {
     "buyerProtection": "Get full refund if the item is not as described or if is not delivered",
-    "paymentProtection": "FluffNest keeps your information and payment safe"
+    "paymentProtection": "FluffNest keeps your information and payment safe",
+    "thankYouForPayment":"Thank you! We've received your payment."
+  },
+  "errors": {
+    "contactName": "A contact name is required",
+    "address": "An address is required",
+    "zipCode": "A zip code is required",
+    "city": "A city is required",
+    "country": "A country is required"
   }
 }

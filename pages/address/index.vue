@@ -1,57 +1,59 @@
 <template>
   <MainLayout>
     <div id="AddressPage" class="mt-4 max-w-[500px] mx-auto px-2">
-      <div class="mx-auto bg-white rounded-lg p-3">
-        <div class="text-xl text-bold mb-2">Address Details</div>
+      <div class="mx-auto bg-light shadow-main rounded-lg p-3">
+        <div class="text-xl text-bold mb-2">{{ $t('labels.addressDetails') }}</div>
         <form @submit.prevent="submit()">
           <TextInput
             class="w-full"
-            placeholder="Contact Name"
+            :placeholderKey="'placeholders.name'"
             v-model:input="contactName"
             inputType="text"
-            :error="error && error.type == 'contactName' ? error.message : ''"
+            :error="error && error.type == 'contactName' ? $t(error.message) : ''"
           />
 
           <TextInput
             class="w-full mt-2"
-            placeholder="Address"
+            :placeholderKey="'placeholders.address'"
             v-model:input="address"
             inputType="text"
-            :error="error && error.type == 'address' ? error.message : ''"
+            :error="error && error.type == 'address' ? $t(error.message) : ''"
           />
 
           <TextInput
             class="w-full mt-2"
-            placeholder="Zip Code"
+            :placeholderKey="'placeholders.zip'"
             v-model:input="zipCode"
             inputType="text"
-            :error="error && error.type == 'zipCode' ? error.message : ''"
+            :error="error && error.type == 'zipCode' ? $t(error.message) : ''"
           />
 
           <TextInput
             class="w-full mt-2"
-            placeholder="City"
+            :placeholderKey="'placeholders.city'"
             v-model:input="city"
             inputType="text"
-            :error="error && error.type == 'city' ? error.message : ''"
+            :error="error && error.type == 'city' ? $t(error.message) : ''"
           />
 
           <TextInput
             class="w-full mt-2"
-            placeholder="Country"
+            :placeholderKey="'placeholders.country'"
             v-model:input="country"
             inputType="text"
-            :error="error && error.type == 'country' ? error.message : ''"
+            :error="error && error.type == 'country' ? $t(error.message) : ''"
           />
 
-          <button
-            :disabled="isWorking"
-            type="submit"
-            class="mt-6 bg-gradient-to-r from-[#FE630C] to-[#FF3200] w-full text-white text-[21px] font-semibold p-1.5 rounded-full"
-          >
-            <div v-if="!isWorking">Update Address</div>
-            <Icon v-else name="eos-icons:loading" size="25" class="mr-2" />
-          </button>
+          <div class="flex justify-center">
+            <button
+              :disabled="isWorking"
+              type="submit"
+              class="app-btn my-4 bg-sky-400 flex justify-center"
+            >
+              <p v-if="!isWorking">{{ $t('buttons.updateAddress') }}</p>
+              <Icon v-else name="eos-icons:loading" size="25" class="mr-2" />
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -59,8 +61,8 @@
 </template>
 
 <script setup>
-import MainLayout from "~/layouts/MainLayout.vue"
-import { useUserStore } from "~/stores/user"
+import MainLayout from "@/layouts/MainLayout.vue"
+import { useUserStore } from "@/stores/user"
 const userStore = useUserStore()
 
 const user = useSupabaseUser()
@@ -78,7 +80,7 @@ let error = ref(null)
 
 watchEffect(async () => {
   currentAddress.value = await useFetch(
-    `/api/prisma/get-address-by-user/${user.value / id}`
+    `/api/prisma/get-address-by-user/${user.value.id}`
   )
   if (currentAddress.value.data) {
     contactName.value = currentAddress.value.data.name
@@ -98,27 +100,27 @@ const submit = async () => {
   if (!contactName.value) {
     error.value = {
       type: "contactName",
-      message: "A contact name is required",
+      message: "errors.contactName",
     }
   } else if (!address.value) {
     error.value = {
       type: "address",
-      message: "An address is required",
+      message: "errors.address",
     }
   } else if (!zipCode.value) {
     error.value = {
       type: "zipCode",
-      message: "A zip code is required",
+      message: "errors.zipCode",
     }
   } else if (!city.value) {
     error.value = {
       type: "city",
-      message: "A city is required",
+      message: "errors.city",
     }
   } else if (!country.value) {
     error.value = {
       type: "country",
-      message: "A country is required",
+      message: "errors.country",
     }
   }
 

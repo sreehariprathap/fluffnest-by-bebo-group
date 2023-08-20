@@ -16,14 +16,14 @@
       <div class="flex gap-2 justify-center">
         <button
           @click="login('google')"
-          class="bg-slate-100 p-2 rounded-full h-10 w-10 shadow-md"
+          class="bg-slate-100 p-2 rounded-full h-10 w-10 shadow-main"
         >
           <img class="w-full" src="/google-logo.png" />
         </button>
 
         <button
           @click="login('github')"
-          class="bg-slate-100 p-2 rounded-full h-10 w-10 shadow-md"
+          class="bg-slate-100 p-2 rounded-full h-10 w-10 shadow-main"
         >
           <img class="w-full" src="/github-logo.png" />
         </button>
@@ -37,7 +37,7 @@
     </label>
     <input
       type="text"
-      :placeholder=" $t('placeholders.email')"
+      :placeholder="$t('placeholders.email')"
       class="input input-sm input-bordered"
     />
   </div>

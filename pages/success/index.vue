@@ -1,16 +1,18 @@
 <template>
   <MainLayout>
     <div id="SuccessPage" class="mt-4 max-w-[1200px] mx-auto px-2 min-h-[50vh]">
-      <div class="bg-white w-full p-6 min-h-[150px]">
-        <div class="flex items-center text-xl">
+      <div class="bg-light w-full p-6 min-h-[150px] shadow-main rounded-md">
+        <div class="flex items-center text-xl justify-center">
           <Icon
             name="clarity:success-standard-line"
-            color="#5FCB04"
-            size="35"
+            color="#009A66"
+            size="90"
           />
-          <span class="pl-4">Payment Successful</span>
         </div>
-        <p class="text-sm pl-[50px]">Thank you! We've received your payment.</p>
+        <div class="flex flex-col justify-center py-5 gap-3 items-center">
+          <h1 class="text-2xl font-bold">{{ $t('labels.paymentSuccess') }}</h1>
+          <p class="text-lg"> {{ $t('texts.thankYouForPayment') }}</p>
+        </div>
       </div>
     </div>
   </MainLayout>

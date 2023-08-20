@@ -22,7 +22,7 @@
           @mouseleave="isAccountMenu = false"
           class="relative flex items-center px-3 h-full text-sm font-normal app-list-text border-none gap-2 mr-10 w-44"
           :class="
-            isAccountMenu ? 'bg-white  z-40 shadow-xl' : 'border border-primary'
+            isAccountMenu ? 'bg-white  z-40 shadow-main' : 'border border-primary'
           "
         >
           <Icon name="ph:user-thin" size="19" />
@@ -31,7 +31,7 @@
 
           <div
             id="AccountMenu"
-            class="absolute bg-white min-w-[213.5px] text-dark-main z-40 top-[38px] -left-[37.5px] border-none hover:border shadow-2xl"
+            class="absolute bg-white min-w-[213.5px] text-dark-main z-40 top-[38px] -left-[37.5px] border-none hover:border shadow-main"
           >
             <div
               v-if="isAccountMenu"

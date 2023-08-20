@@ -28,14 +28,14 @@
       <!-- items section  -->
       <div v-else class="md:flex gap-4 justify-between mx-auto w-full">
         <div class="md:w-[65%]">
-          <div class="bg-white rounded-lg p-4">
+          <div class="bg-light shadow-main rounded-lg p-4">
             <div class="text-2xl font-bold mb-2">
               {{ $t('labels.shoppingCart') }} ({{ userStore.cart.length }})
             </div>
           </div>
 
 
-          <div id="Items" class="bg-white rounded-lg p-4 mt-4">
+          <div id="Items" class="bg-light shadow-main rounded-lg p-4 mt-4">
             <div v-for="product in userStore.cart">
               <CartItem
                 :product="product"
@@ -48,7 +48,7 @@
         <!-- side menu  -->
         <div class="md:hidden block my-4" />
         <div class="md:w-[35%]">
-          <div id="Summary" class="bg-white rounded-lg p-4">
+          <div id="Summary" class="bg-light shadow-main rounded-lg p-4">
             <div class="text-2xl font-extrabold mb-2">              {{ $t('labels.summary') }}
               </div>
             <div class="flex items-center justify-between my-4">
@@ -66,7 +66,7 @@
             </button>
           </div>
 
-          <div id="PaymentProtection" class="bg-white rounded-lg p-4 mt-4">
+          <div id="PaymentProtection" class="bg-light shadow-main rounded-lg p-4 mt-4">
             <div class="text-lg font-semibold mb-2">{{ $t('labels.paymentMethods') }}</div>
             <div class="flex items-center justify-start gap-8 my-4">
               <div v-for="card in cards">

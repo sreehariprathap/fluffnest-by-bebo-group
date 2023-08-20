@@ -1,5 +1,5 @@
 .app-card {
-  background-color: white;
+ @apply bg-light ease-in-out duration-200;
   padding-bottom: 1.1em;
   border-radius: 10px;
   margin: 1em;
@@ -40,4 +40,8 @@
   to {
     transform: translateX(100%);
   }
+}
+
+.shadow-main {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

@@ -5,7 +5,7 @@
         <div class="md:w-[33%]">
           <img
             v-if="currentImage"
-            class="rounded-lg object-fit"
+            class="rounded-lg object-fit shadow-main"
             :src="currentImage"
           />
           <div
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="md:w-[63%] bg-white p-3 rounded-lg">
+        <div class="md:w-[63%] bg-light shadow-main p-3 rounded-lg">
           <div v-if="product && product.data">
             <p class="mb-2 app-product-title text-3xl">{{ product.data.title }}</p>
             <p class="font-light text-[12px] mb-2">

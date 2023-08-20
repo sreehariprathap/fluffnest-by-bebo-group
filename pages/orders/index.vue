@@ -1,7 +1,7 @@
 <template>
   <MainLayout>
     <div id="OrdersPage" class="mt-4 max-w-[1200px] mx-auto px-2 min-h-[50vh]">
-      <div class="bg-light w-full p-6 min-h-[150px] shadow-md">
+      <div class="bg-light w-full p-6 min-h-[150px] shadow-main">
         <div class="flex items-center text-xl">
           <Icon name="carbon:delivery" color="#009A66" size="35" />
           <span class="pl-4"> 
