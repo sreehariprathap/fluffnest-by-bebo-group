@@ -20,17 +20,20 @@ module.exports = {
           xl: "1280px",
           "2xl": "1536px",
         },
-        primary: "#65C18C",
-        "primary-dark": "#36AE7C",
-        "primary-light": "#C1F4C5",
+        primary: "##38bdf8",
+        "primary-dark": "#2563eb",
+        "primary-light": "#7dd3fc",
         "dark-main": "#181818",
         "dark-secondary": "#272829",
-        light:"#F7F7F7"
+        light: "#fdfffc",
+        danger:'#EF6262',
+        warning:'#FF8400',
+        success :'#009A66'
       },
     },
   },
   daisyui: {
     themes: ["light"],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwind-scrollbar")],
 }

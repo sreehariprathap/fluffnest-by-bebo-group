@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("./common.scss");
+
+* {
+  @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-white;
+}
