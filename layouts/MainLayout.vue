@@ -1,7 +1,7 @@
 <template>
   <div
     id="MainLayout"
-    class="w-full fixed z-50 h-full min-h-screen overflow-y-scroll bg-gray-100"
+    class="w-full fixed z-50 h-full min-h-screen overflow-y-scroll bg-white"
   >
     <TopMenu />
     <Loading v-if="userStore.isLoading" />
