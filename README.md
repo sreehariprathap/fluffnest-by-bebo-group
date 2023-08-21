@@ -1,63 +1,46 @@
-# Nuxt 3 Minimal Starter
+# FluffNest E-Commerce Platform
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+FluffNest is a modern e-commerce platform built using Nuxt 3, Vue 3, and other cutting-edge technologies. It supports multiple languages (English, French, and Japanese), providing a seamless shopping experience for users around the world.
 
-## Setup
+## Technologies Used
 
-Make sure to install the dependencies:
+- Nuxt 3: The core framework that powers the application.
+- Vue 3: The underlying JavaScript framework for building dynamic user interfaces.
+- Tailwind CSS: A utility-first CSS framework for styling.
+- SASS: Used for additional styling and customization.
+- DaisyUI: A component library and set of utilities for Tailwind CSS.
+- Pinia: A modern and lightweight state management system for Vue applications.
+- Supabase: Provides database hosting and authentication services.
+- Prisma: A database toolkit for designing and querying databases.
+- Stripe: Integrated for secure and seamless payment processing.
 
-```bash
-# npm
-npm install
+## Features
 
-# pnpm
-pnpm install
+- Multilingual Support: FluffNest supports English, French, and Japanese languages, making it accessible to a wider audience.
+- Responsive Design: The platform offers a responsive and user-friendly design, ensuring a consistent experience across devices.
+- Secure Payment: Integrated Stripe for secure payment processing. Test card number: 4242 4242 4242 4242, Expiry: 12/24, CVV: 123.
+- State Management: Utilizes Pinia for efficient state management, ensuring a smooth user experience.
+- Database Hosting: Supabase is used to host the database and provide authentication services.
+- Internationalization: Translate the platform's content into multiple languages for a global reach.
+- Stylish UI: Tailwind CSS with DaisyUI provides a clean and modern visual design.
 
-# yarn
-yarn install
-```
+## Getting Started
 
-## Development Server
+1. Clone the repository: `git clone https://github.com/yourusername/fluffnest.git`
+2. Install dependencies: `npm install`
+3. Copy the `.env.example` file to `.env` and configure environment variables.
+4. Run the development server: `npm run dev`
 
-Start the development server on `http://localhost:3000`:
+## Configuration
 
-```bash
-# npm
-npm run dev
+- Check the `nuxt.config.js` file for Nuxt-specific configurations.
+- Configure your Supabase credentials in the `.env` file.
+- Configure Stripe credentials in the appropriate places (e.g., payment processing code).
 
-# pnpm
-pnpm run dev
+## Contribution
 
-# yarn
-yarn dev
-```
+Contributions are welcome! Feel free to open issues and submit pull requests.
 
-## Production
+---
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**FluffNest** - Your Go-To E-Commerce Platform
