@@ -26,7 +26,7 @@ FluffNest is a modern e-commerce platform built using Nuxt 3, Vue 3, and other c
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/yourusername/fluffnest.git`
+1. Clone the repository: `git clone https://github.com/sreehariprathap/fluffnest.git`
 2. Install dependencies: `npm install`
 3. Copy the `.env.example` file to `.env` and configure environment variables.
 4. Run the development server: `npm run dev`
