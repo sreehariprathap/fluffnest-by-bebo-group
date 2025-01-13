@@ -31,6 +31,45 @@ FluffNest is a modern e-commerce platform built using Nuxt 3, Vue 3, and other c
 3. Copy the `.env.example` file to `.env` and configure environment variables.
 4. Run the development server: `npm run dev`
 
+## Development Guides
+### Prisma
+1. **Initialize Prisma**  
+   Run the following command to initialize Prisma in your project:
+   ```bash
+   npx prisma init
+   ```
+
+2. **Generate Prisma Client**  
+   Generate the Prisma Client to use in your application:
+   ```bash
+   npx prisma generate
+   ```
+
+3. **Run Database Migrations**  
+   Apply your database migrations:
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+
+4. **Seed the Database**  
+   Populate your database with seed data:
+   ```bash
+   npx prisma db seed
+   ```
+
+
+### Test Cards for Stripe
+
+Here are some test card numbers you can use for testing Stripe integration:
+
+| Card Type           | Card Number        | CVV         | Expiry Date    |
+|---------------------|--------------------|-------------|----------------|
+| Visa                | 4242 4242 4242 4242| Any 3 digits| Any future date|
+| Visa (debit)        | 4000 0566 5566 5556| Any 3 digits| Any future date|
+| Mastercard          | 5555 5555 5555 4444| Any 3 digits| Any future date|
+| Mastercard (2-series)| 2223 0031 2200 3222| Any 3 digits| Any future date|
+
+
 ## Configuration
 
 - Check the `nuxt.config.js` file for Nuxt-specific configurations.
