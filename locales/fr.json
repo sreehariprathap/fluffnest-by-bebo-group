@@ -87,7 +87,9 @@
   "texts": {
     "buyerProtection": "Obtenez un remboursement complet si l'article n'est pas conforme à la description ou s'il n'est pas livré",
     "paymentProtection": "FluffNest sécurise vos informations et vos paiements",
-    "thankYouForPayment": "Merci ! Nous avons bien reçu votre paiement."
+    "thankYouForPayment": "Merci ! Nous avons bien reçu votre paiement.",
+    "stripeMockPayment": "Ceci est un paiement factice. Utilisez les informations de carte de test suivantes pour effectuer un paiement. Numéro de carte : 4242 4242 4242 4242, date d'expiration : toute date future, CVC : n'importe quel numéro à 3 chiffres"
+
   },
   "errors": {
     "contactName": "Un nom de contact est requis",

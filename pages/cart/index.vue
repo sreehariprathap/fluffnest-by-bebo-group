@@ -98,6 +98,10 @@ let selectedArray = ref([])
 
 onMounted(() => {
   setTimeout(() => (userStore.isLoading = false), 200)
+  // add all items in store to selected array and toggle the radio button 
+  userStore.cart.forEach((item) => {
+    selectedArray.value.push(item)
+  })
 })
 
 const cards = ref(["visa.png", "mastercard.png", "paypal.png", "applepay.png"])

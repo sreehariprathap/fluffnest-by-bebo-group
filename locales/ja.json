@@ -87,7 +87,9 @@
   "texts": {
     "buyerProtection": "商品が説明と異なる場合や配達されない場合、全額返金されます",
     "paymentProtection": "FluffNestはあなたの情報と支払いを安全に保ちます",
-    "thankYouForPayment": "ありがとうございます！お支払いを受け付けました。"
+    "thankYouForPayment": "ありがとうございます！お支払いを受け付けました。",
+    "stripeMockPayment": "これは模擬支払いです。以下のテストカード情報を使用して支払いを行ってください。カード番号：4242 4242 4242 4242、有効期限：任意の未来の日付、CVC：任意の3桁の数字"
+
   },
   "errors": {
     "contactName": "担当者名が必要です",

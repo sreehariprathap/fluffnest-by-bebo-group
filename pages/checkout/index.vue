@@ -4,7 +4,9 @@
       <div class="md:flex gap-4 justify-between mx-auto w-full">
         <div class="md:w-[65%]">
           <div class="bg-light rounded-lg p-4 shadow-main">
-            <div class="text-xl font-semibold mb-2">{{ $t('labels.shippingAddress') }}</div>
+            <div class="text-xl font-semibold mb-2">
+              {{ $t("labels.shippingAddress") }}
+            </div>
 
             <div v-if="currentAddress && currentAddress.data">
               <NuxtLink
@@ -12,34 +14,36 @@
                 class="flex items-center pb-2 text-blue-500 hover:text-red-400"
               >
                 <Icon name="mdi:plus" size="18" class="mr-2" />
-                {{ $t('labels.updateAddress') }}
+                {{ $t("labels.updateAddress") }}
               </NuxtLink>
 
               <div class="pt-2 border-t">
-                <div class="underline pb-1">{{ $t('labels.deliveryAddress') }}</div>
+                <div class="underline pb-1">
+                  {{ $t("labels.deliveryAddress") }}
+                </div>
                 <ul class="text-xs">
                   <li class="flex items-center gap-2">
-                    <div>{{ $t('labels.contactName') }}:</div>
+                    <div>{{ $t("labels.contactName") }}:</div>
                     <div class="font-bold">{{ currentAddress.data.name }}</div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>{{ $t('labels.address') }}:</div>
+                    <div>{{ $t("labels.address") }}:</div>
                     <div class="font-bold">
                       {{ currentAddress.data.address }}
                     </div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>{{ $t('labels.zip') }}:</div>
+                    <div>{{ $t("labels.zip") }}:</div>
                     <div class="font-bold">
                       {{ currentAddress.data.zipcode }}
                     </div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>{{ $t('labels.city') }}:</div>
+                    <div>{{ $t("labels.city") }}:</div>
                     <div class="font-bold">{{ currentAddress.data.city }}</div>
                   </li>
                   <li class="flex items-center gap-2">
-                    <div>{{ $t('labels.country') }}:</div>
+                    <div>{{ $t("labels.country") }}:</div>
                     <div class="font-bold">
                       {{ currentAddress.data.country }}
                     </div>
@@ -54,7 +58,7 @@
               class="flex items-center text-blue-500 hover:text-red-400"
             >
               <Icon name="mdi:plus" size="18" class="mr-2" />
-              {{ $t('labels.addAddress') }}
+              {{ $t("labels.addAddress") }}
             </NuxtLink>
           </div>
 
@@ -68,17 +72,19 @@
         <div class="md:hidden block my-4" />
         <div class="md:w-[35%]">
           <div id="PlaceOrder" class="bg-light shadow-main rounded-lg p-4">
-            <div class="text-2xl font-extrabold mb-2">{{ $t('labels.summary') }}</div>
+            <div class="text-2xl font-extrabold mb-2">
+              {{ $t("labels.summary") }}
+            </div>
 
             <div class="flex items-center justify-between my-4">
-              <div class="">{{ $t('labels.totalShipping') }}</div>
-              <div class="">{{ $t('labels.free') }}</div>
+              <div class="">{{ $t("labels.totalShipping") }}</div>
+              <div class="">{{ $t("labels.free") }}</div>
             </div>
 
             <div class="border-t" />
 
             <div class="flex items-center justify-between my-4">
-              <div class="font-semibold">{{ $t('labels.total') }}</div>
+              <div class="font-semibold">{{ $t("labels.total") }}</div>
               <div class="text-2xl font-semibold">
                 $ <span class="font-extrabold">{{ total / 100 }}</span>
               </div>
@@ -103,7 +109,7 @@
                 :class="isProcessing ? 'opacity-70' : 'opacity-100'"
               >
                 <Icon v-if="isProcessing" name="eos-icons:loading" />
-                <div v-else>{{ $t('buttons.placeOrder') }}</div>
+                <div v-else>{{ $t("buttons.placeOrder") }}</div>
               </button>
             </form>
           </div>
@@ -111,7 +117,9 @@
           <div class="bg-light shadow-main rounded-lg p-4 mt-4">
             <div class="text-lg font-semibold mb-2 mt-2">FluffNest</div>
             <p class="my-2">
-              {{ $t('texts.paymentProtection') }}
+              {{ $t("texts.paymentProtection") }} <br />
+              <br />
+              "{{ $t("texts.stripeMockPayment") }}"
             </p>
           </div>
         </div>
@@ -121,73 +129,73 @@
 </template>
 
 <script setup>
-import MainLayout from "~/layouts/MainLayout.vue"
-import { useUserStore } from "~/stores/user"
-const userStore = useUserStore()
-const user = useSupabaseUser()
-const route = useRoute()
+import MainLayout from "~/layouts/MainLayout.vue";
+import { useUserStore } from "~/stores/user";
+const userStore = useUserStore();
+const user = useSupabaseUser();
+const route = useRoute();
 
-definePageMeta({ middleware: "authentication" })
+definePageMeta({ middleware: "authentication" });
 
-let stripe = null
-let elements = null
-let card = null
-let form = null
-let total = ref(0)
-let clientSecret = null
-let currentAddress = ref(null)
-let isProcessing = ref(false)
+let stripe = null;
+let elements = null;
+let card = null;
+let form = null;
+let total = ref(0);
+let clientSecret = null;
+let currentAddress = ref(null);
+let isProcessing = ref(false);
 
 onBeforeMount(async () => {
   if (userStore.checkout.length < 1) {
-    return navigateTo("/cart")
+    return navigateTo("/cart");
   }
 
-  total.value = 0.0
+  total.value = 0.0;
   if (user.value) {
     currentAddress.value = await useFetch(
       `/api/prisma/get-address-by-user/${user.value.id}`
-    )
-    setTimeout(() => (userStore.isLoading = false), 200)
+    );
+    setTimeout(() => (userStore.isLoading = false), 200);
   }
-})
+});
 
 watchEffect(() => {
   if (route.fullPath == "/checkout" && !user.value) {
-    return navigateTo("/authentication")
+    return navigateTo("/authentication");
   }
-})
+});
 
 onMounted(async () => {
-  isProcessing.value = true
+  isProcessing.value = true;
 
   userStore.checkout.forEach((item) => {
-    total.value += item.price
-  })
-})
+    total.value += item.price;
+  });
+});
 
 watch(
   () => total.value,
   () => {
     if (total.value > 0) {
-      stripeInit()
+      stripeInit();
     }
   }
-)
+);
 
 const stripeInit = async () => {
-  const runtimeConfig = useRuntimeConfig()
-  stripe = Stripe(runtimeConfig.public.stripePk)
+  const runtimeConfig = useRuntimeConfig();
+  stripe = Stripe(runtimeConfig.public.stripePk);
 
   let res = await $fetch("/api/stripe/paymentintent", {
     method: "POST",
     body: {
       amount: total.value,
     },
-  })
-  clientSecret = res.client_secret
+  });
+  clientSecret = res.client_secret;
 
-  elements = stripe.elements()
+  elements = stripe.elements();
   var style = {
     base: {
       fontSize: "18px",
@@ -197,48 +205,48 @@ const stripeInit = async () => {
       color: "#EE4B2B",
       iconColor: "#EE4B2B",
     },
-  }
+  };
   card = elements.create("card", {
     hidePostalCode: true,
     style: style,
-  })
+  });
 
   // Stripe injects an iframe into the DOM
-  card.mount("#card-element")
+  card.mount("#card-element");
   card.on("change", function (event) {
     // Disable the Pay button if there are no card details in the Element
-    document.querySelector("button").disabled = event.empty
+    document.querySelector("button").disabled = event.empty;
     document.querySelector("#card-error").textContent = event.error
       ? event.error.message
-      : ""
-  })
+      : "";
+  });
 
-  isProcessing.value = false
-}
+  isProcessing.value = false;
+};
 
 const pay = async () => {
   if (currentAddress.value && currentAddress.value.data == "") {
-    showError("Please add shipping address")
-    return
+    showError("Please add shipping address");
+    return;
   }
-  isProcessing.value = true
+  isProcessing.value = true;
 
   let result = await stripe.confirmCardPayment(clientSecret, {
     payment_method: { card: card },
-  })
+  });
 
   if (result.error) {
-    showError(result.error.message)
-    isProcessing.value = false
+    showError(result.error.message);
+    isProcessing.value = false;
   } else {
-    await createOrder(result.paymentIntent.id)
-    userStore.cart = []
-    userStore.checkout = []
+    await createOrder(result.paymentIntent.id);
+    userStore.cart = [];
+    userStore.checkout = [];
     setTimeout(() => {
-      return navigateTo("/success")
-    }, 500)
+      return navigateTo("/success");
+    }, 500);
   }
-}
+};
 
 const createOrder = async (stripeId) => {
   await useFetch("/api/prisma/create-order", {
@@ -253,15 +261,15 @@ const createOrder = async (stripeId) => {
       country: currentAddress.value.data.country,
       products: userStore.checkout,
     },
-  })
-}
+  });
+};
 
 const showError = (errorMsgText) => {
-  let errorMsg = document.querySelector("#card-error")
+  let errorMsg = document.querySelector("#card-error");
 
-  errorMsg.textContent = errorMsgText
+  errorMsg.textContent = errorMsgText;
   setTimeout(() => {
-    errorMsg.textContent = ""
-  }, 4000)
-}
+    errorMsg.textContent = "";
+  }, 4000);
+};
 </script>

@@ -6,7 +6,7 @@
         @mouseleave="isHover = false"
         class="flex items-center justify-start p-0.5 cursor-pointer"
       >
-        <div
+        <!-- <div
           @click="isSelected = !isSelected"
           class="flex items-center justify-center h-[20px] w-[20px] rounded-full border mr-5 ml-2"
           :class="[
@@ -15,7 +15,7 @@
           ]"
         >
           <div class="h-[8px] w-[8px] rounded-full bg-white" />
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -65,7 +65,7 @@ const { product, selectedArray } = toRefs(props)
 const emit = defineEmits(["selectedRadio"])
 
 let isHover = ref(false)
-let isSelected = ref(false)
+let isSelected = ref(true)
 
 const removeFromCart = () => {
   userStore.cart.forEach((prod, index) => {
