@@ -20,7 +20,7 @@ module.exports = {
           xl: "1280px",
           "2xl": "1536px",
         },
-        primary: "##38bdf8",
+        primary: "#38bdf8",
         "primary-dark": "#2563eb",
         "primary-light": "#7dd3fc",
         "dark-main": "#181818",

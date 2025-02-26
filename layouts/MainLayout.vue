@@ -8,6 +8,9 @@
     <div class="py-5 min-h-[45vh]">
       <slot />
     </div>
+    <div class="fixed">
+      <ChatWindow />
+    </div>
     <Footer />
   </div>
 </template>
