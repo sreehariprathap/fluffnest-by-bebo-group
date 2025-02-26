@@ -13,10 +13,14 @@ FluffNest is a modern e-commerce platform built using Nuxt 3, Vue 3, and other c
 - Supabase: Provides database hosting and authentication services.
 - Prisma: A database toolkit for designing and querying databases.
 - Stripe: Integrated for secure and seamless payment processing.
+- i18n: Internationalization library for translating the platform's content.
+- ESLint: A pluggable linting utility for JavaScript and JSX.
+- Google generative ai: Used for customer support chat DSS model.
 
 ## Features
 
 - Multilingual Support: FluffNest supports English, French, and Japanese languages, making it accessible to a wider audience.
+- Chat Support: Integrated Google generative ai for customer support chat.
 - Responsive Design: The platform offers a responsive and user-friendly design, ensuring a consistent experience across devices.
 - Secure Payment: Integrated Stripe for secure payment processing. Test card number: 4242 4242 4242 4242, Expiry: 12/24, CVV: 123.
 - State Management: Utilizes Pinia for efficient state management, ensuring a smooth user experience.
@@ -30,6 +34,45 @@ FluffNest is a modern e-commerce platform built using Nuxt 3, Vue 3, and other c
 2. Install dependencies: `npm install`
 3. Copy the `.env.example` file to `.env` and configure environment variables.
 4. Run the development server: `npm run dev`
+
+## Development Guides
+### Prisma
+1. **Initialize Prisma**  
+   Run the following command to initialize Prisma in your project:
+   ```bash
+   npx prisma init
+   ```
+
+2. **Generate Prisma Client**  
+   Generate the Prisma Client to use in your application:
+   ```bash
+   npx prisma generate
+   ```
+
+3. **Run Database Migrations**  
+   Apply your database migrations:
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+
+4. **Seed the Database**  
+   Populate your database with seed data:
+   ```bash
+   npx prisma db seed
+   ```
+
+
+### Test Cards for Stripe
+
+Here are some test card numbers you can use for testing Stripe integration:
+
+| Card Type           | Card Number        | CVV         | Expiry Date    |
+|---------------------|--------------------|-------------|----------------|
+| Visa                | 4242 4242 4242 4242| Any 3 digits| Any future date|
+| Visa (debit)        | 4000 0566 5566 5556| Any 3 digits| Any future date|
+| Mastercard          | 5555 5555 5555 4444| Any 3 digits| Any future date|
+| Mastercard (2-series)| 2223 0031 2200 3222| Any 3 digits| Any future date|
+
 
 ## Configuration
 

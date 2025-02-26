@@ -8,7 +8,7 @@
   "welcome": "Welcome to fluffnest!",
   "myOrders": "My Orders",
   "signOut": "Sign Out",
-  "cart":"Cart",
+  "cart": "Cart",
   "footer": {
     "help": "Help",
     "helpCenter": "Help Center, Disputes & Reports, Buyer Protection, Report IPR infringement, Regulated Information",
@@ -87,7 +87,8 @@
   "texts": {
     "buyerProtection": "Get full refund if the item is not as described or if is not delivered",
     "paymentProtection": "FluffNest keeps your information and payment safe",
-    "thankYouForPayment": "Thank you! We've received your payment."
+    "thankYouForPayment": "Thank you! We've received your payment.",
+    "stripeMockPayment": "This is a mock payment. Use the following test card details to make a payment. card number : 4242 4242 4242 4242, expiry date : any future date, cvc : any 3 digit number"
   },
   "errors": {
     "contactName": "A contact name is required",
