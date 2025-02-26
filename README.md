@@ -13,10 +13,14 @@ FluffNest is a modern e-commerce platform built using Nuxt 3, Vue 3, and other c
 - Supabase: Provides database hosting and authentication services.
 - Prisma: A database toolkit for designing and querying databases.
 - Stripe: Integrated for secure and seamless payment processing.
+- i18n: Internationalization library for translating the platform's content.
+- ESLint: A pluggable linting utility for JavaScript and JSX.
+- Google generative ai: Used for customer support chat DSS model.
 
 ## Features
 
 - Multilingual Support: FluffNest supports English, French, and Japanese languages, making it accessible to a wider audience.
+- Chat Support: Integrated Google generative ai for customer support chat.
 - Responsive Design: The platform offers a responsive and user-friendly design, ensuring a consistent experience across devices.
 - Secure Payment: Integrated Stripe for secure payment processing. Test card number: 4242 4242 4242 4242, Expiry: 12/24, CVV: 123.
 - State Management: Utilizes Pinia for efficient state management, ensuring a smooth user experience.
