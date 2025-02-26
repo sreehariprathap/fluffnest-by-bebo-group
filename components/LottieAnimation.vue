@@ -1,0 +1,9 @@
+<template>
+  <client-only>
+    <Vue3Lottie
+      animationLink="../assets/female-call-center-operator.json"
+      :height="200"
+      :width="200"
+    />
+  </client-only>
+</template>
