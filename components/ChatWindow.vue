@@ -14,7 +14,11 @@
             v-if="messages.length === 0"
             class="flex justify-center items-center h-full"
           >
-            <img src="~/assets/fluff-ai.png" alt="Company Logo" class="w-56  opacity-100" />
+            <img
+              src="~/assets/fluff-ai.png"
+              alt="Company Logo"
+              class="w-56 opacity-100"
+            />
           </div>
           <div v-else>
             <div
@@ -69,12 +73,12 @@
     <button
       v-if="!isOpen"
       @click="openChat"
-      class="fixed bottom-4 right-4 btn-magic w-16 h-16 text-white p-2 rounded-full cursor-pointer flex justify-center items-center shadow"
+      class="fixed bottom-4 right-4 btn-magic w-16 h-16 text-[#38bdf8] p-2 rounded-full cursor-pointer flex justify-center items-center shadow"
     >
       <svg
         height="32"
         width="32"
-        fill="#FFFFFF"
+        fill="#38bdf8"
         viewBox="0 0 24 24"
         data-name="Layer 1"
         id="Layer_1"
@@ -188,20 +192,14 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: #1c1a1c;
+  background: #fdfffc;
   cursor: pointer;
   transition: all 450ms ease-in-out;
 }
 
 .sparkle {
-  fill: #fff;
+  fill: #38bdf8;
   transition: all 800ms ease;
-}
-
-.text {
-  font-weight: 600;
-  color: #fff;
-  font-size: medium;
 }
 
 .btn-magic:hover {
@@ -210,10 +208,6 @@ export default {
     inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
     0px 0px 0px 4px rgba(255, 255, 255, 0.2), 0px 0px 180px 0px #2563eb;
   transform: translateY(-1px);
-}
-
-.btn-magic:hover .text {
-  color: white;
 }
 
 .btn-magic:hover .sparkle {

@@ -73,7 +73,7 @@
           <div class="border-b" />
 
           <div class="flex items-center justify-start gap-2 my-2">
-            <div class="text-3xl font-bold">$ {{ priceComputed }}</div>
+            <div class="text-3xl font-bold">$ {{ priceComputed/100 }}</div>
           </div>
 
           <p class="text-success text-xs font-semibold pt-1">
@@ -102,7 +102,7 @@
 import MainLayout from "~/layouts/MainLayout.vue"
 import { useUserStore } from "~/stores/user"
 const userStore = useUserStore()
-const priceComputed = 500
+let priceComputed = 0
 
 const route = useRoute()
 
@@ -120,6 +120,7 @@ watchEffect(() => {
     currentImage.value = product.value.data.url
     images.value[0] = product.value.data.url
     userStore.isLoading = false
+    priceComputed = product.value.data.price
   }
 })
 
